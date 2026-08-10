@@ -1,0 +1,44 @@
+name: propose
+
+on:
+  schedule:
+    # 06:00 UTC daily - adjust to whenever you want the digest to land.
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}  # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit updated state files back to the repo
+
+concurrency:
+  group: propose
+  cancel-in-progress: false
+
+jobs:
+  propose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily proposal pipeline
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LLM_MODEL: ${{ vars.LLM_MODEL || 'claude-sonnet-5' }}
+        run: python src/propose.py
+
+      - name: Commit updated state
+        run: |
+          git config user.name "programming-digest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
+          git add data/
+          git diff --cached --quiet || git commit -m "chore: propose run $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push

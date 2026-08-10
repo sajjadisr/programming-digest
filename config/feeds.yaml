@@ -1,0 +1,90 @@
+# Sourcing config.
+# Tiers exist so score.py can weight "this IS the news" (release notes, vendor blogs)
+# above "this is someone's take on the news" (aggregators), per the plan's sourcing tiering.
+
+aggregators:
+  # tier: general-purpose discussion/aggregation sites. Engagement-scored (points/upvotes).
+  - name: hacker_news
+    type: rss
+    url: https://hnrss.org/best
+    tier: 2
+  - name: lobsters
+    type: rss
+    url: https://lobste.rs/rss
+    tier: 2
+  - name: devto
+    type: rss
+    url: https://dev.to/feed
+    tier: 3
+    # dev.to is noisy; keep filtering tight via taxonomy keyword match in score.py
+    filter_tags: [programming, webdev, javascript, python, rust, ai, opensource]
+
+reddit:
+  # tier: aggregator-adjacent, filtered as hard as dev.to.
+  tier: 3
+  subreddits:
+    - programming
+    - typescript
+    - rust
+    - golang
+    - Python
+    - node
+
+vendor_blogs:
+  # tier: primary source — vendor's own announcement of their own work.
+  tier: 1
+  feeds:
+    - name: nodejs_blog
+      url: https://nodejs.org/en/feed/blog.xml
+    - name: v8_blog
+      url: https://v8.dev/blog.atom
+    - name: python_insider
+      url: https://blog.python.org/feeds/posts/default
+    - name: vercel_blog
+      url: https://vercel.com/atom
+    - name: rust_blog
+      url: https://blog.rust-lang.org/feed.xml
+    - name: go_blog
+      url: https://go.dev/blog/feed.atom
+
+release_feeds:
+  # tier: highest precision — the changelog IS the news. Free, no key, per-repo Atom feed.
+  # Add/remove repos to match what your audience actually tracks.
+  tier: 1
+  repos:
+    - microsoft/vscode
+    - microsoft/TypeScript
+    - facebook/react
+    - vuejs/core
+    - rust-lang/rust
+    - nodejs/node
+    - python/cpython
+    - golang/go
+    - denoland/deno
+    - oven-sh/bun
+    - vitejs/vite
+    - tailwindlabs/tailwindcss
+    - vercel/next.js
+    - anthropics/claude-code
+
+taxonomy:
+  # used both for keyword-match scoring and for the LLM select/write prompts
+  - languages_runtimes
+  - frontend_frameworks
+  - ai_coding_tools
+  - dev_tooling_build_systems
+  - infra_cloud
+  - databases
+  - security
+  - open_source_releases
+
+# --- mechanical score & filter tuning ---
+scoring:
+  score_threshold: 6.0        # candidates need >= this to reach the LLM select stage
+  min_candidates: 3           # floor: if fewer than this clear the threshold, backfill by rank
+  max_candidates: 40          # ceiling: never send more than this many to the LLM select stage
+  recency_half_life_hours: 30 # engagement/recency decay half-life
+  tier_weight:
+    1: 5.0
+    2: 2.0
+    3: 1.0
