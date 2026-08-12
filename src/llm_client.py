@@ -16,8 +16,23 @@ complexity - just a fallback.
 Env vars:
   GEMINI_API_KEY   - required. Free key: https://aistudio.google.com/apikey
   GROQ_API_KEY     - required. Free key: https://console.groq.com/keys
-  GEMINI_MODEL     - optional, defaults to "gemini-flash-latest"
-  GROQ_MODEL       - optional, defaults to "llama-3.3-70b-versatile"
+  GEMINI_MODEL     - optional, defaults to "gemini-3.6-flash"
+  GROQ_MODEL       - optional, defaults to "openai/gpt-oss-120b"
+
+Both defaults are pinned to explicit, stable model IDs on purpose - do not
+change either back to a "-latest"/floating alias. Two production breaks in
+a row traced back to that:
+  - "gemini-flash-latest" isn't a stable-channel alias; Google's own docs
+    say it points at an experimental model not intended for production,
+    with tighter rate limits, and it can silently repoint to a new model
+    family (that's what broke thinking_budget on 2026-08-12).
+  - "llama-3.3-70b-versatile" (the old Groq default) was deprecated
+    2026-06-17 with a shutdown date of 2026-08-16 - Groq's own recommended
+    replacement is openai/gpt-oss-120b, used here.
+Pinned IDs still eventually get deprecated, but on an announced schedule
+with weeks of notice - check https://console.groq.com/docs/deprecations
+and https://ai.google.dev/gemini-api/docs/changelog occasionally, rather
+than finding out at 6am when the workflow fails.
 """
 from __future__ import annotations
 
@@ -30,8 +45,8 @@ from google.genai import errors as genai_errors
 from google.genai import types as genai_types
 from groq import Groq
 
-_GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-flash-latest")
-_GROQ_MODEL = os.environ.get("GROQ_MODEL", "llama-3.3-70b-versatile")
+_GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.6-flash")
+_GROQ_MODEL = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 
 _gemini_client: genai.Client | None = None
 _groq_client: Groq | None = None
@@ -78,23 +93,28 @@ def _complete_gemini(system: str, user: str, max_tokens: int, json_mode: bool = 
         # it to write out a plain numbered list rather than the requested
         # object). response_mime_type constrains decoding to valid JSON.
         config_kwargs["response_mime_type"] = "application/json"
-        # thinking_budget=0 turns off thinking so the whole max_output_tokens
-        # budget goes to the visible answer, not invisible reasoning tokens.
-        # This is a Gemini 2.5-era parameter. GEMINI_MODEL is set to the
-        # "-latest" alias, which Google resolves server-side and can (and, on
-        # 2026-08-12, did) silently roll onto a new model family - Gemini 3+
-        # replaced thinking_budget with thinking_level and rejects the old
-        # parameter outright with a 400 INVALID_ARGUMENT. Rather than hardcode
-        # a model-name check that the next alias flip would just as silently
-        # invalidate, try the modern param first and fall back live.
-        config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_budget=0)
+        # Minimize thinking so the max_output_tokens budget goes to the
+        # visible answer, not invisible reasoning tokens. Gemini 3.x (the
+        # pinned default) uses thinking_level and cannot fully disable
+        # thinking on Flash models - "minimal" is the closest equivalent.
+        # Gemini 2.5.x instead uses the older thinking_budget=0. Since
+        # GEMINI_MODEL is user-overridable, don't hardcode a model-name
+        # check (that's exactly what silently broke last time a model
+        # family shifted) - try the param that matches the pinned default,
+        # then fall back live if the API rejects it.
+        config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_level="minimal")
     try:
         return _generate(config_kwargs, user)
     except genai_errors.ClientError as e:
         if json_mode and "thinking_config" in config_kwargs:
-            print(f"[llm_client] {_GEMINI_MODEL} rejected thinking_config ({e!r}); retrying without it")
-            config_kwargs.pop("thinking_config", None)
-            return _generate(config_kwargs, user)
+            print(f"[llm_client] {_GEMINI_MODEL} rejected thinking_level ({e!r}); retrying with thinking_budget=0")
+            config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_budget=0)
+            try:
+                return _generate(config_kwargs, user)
+            except genai_errors.ClientError as e2:
+                print(f"[llm_client] {_GEMINI_MODEL} rejected thinking_budget too ({e2!r}); retrying with no thinking override")
+                config_kwargs.pop("thinking_config", None)
+                return _generate(config_kwargs, user)
         raise
 
 
