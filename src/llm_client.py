@@ -50,15 +50,29 @@ def _get_groq_client() -> Groq:
     return _groq_client
 
 
-def _complete_gemini(system: str, user: str, max_tokens: int) -> str:
+def _complete_gemini(system: str, user: str, max_tokens: int, json_mode: bool = False) -> str:
     client = _get_gemini_client()
+    config_kwargs: dict = {
+        "system_instruction": system,
+        "max_output_tokens": max_tokens,
+    }
+    if json_mode:
+        # Without this, "return only JSON" is just a suggestion in the prompt -
+        # the model is free to answer in prose instead (which is what caused
+        # it to write out a plain numbered list rather than the requested
+        # object). response_mime_type constrains decoding to valid JSON.
+        config_kwargs["response_mime_type"] = "application/json"
+        # gemini-flash-latest thinks by default, and thinking tokens are
+        # deducted from the same max_output_tokens budget as the visible
+        # answer. For a mechanical clustering/formatting task that doesn't
+        # need deliberation, that invisible spend was eating enough of the
+        # budget that the real answer got cut off mid-object on larger
+        # batches. Turning thinking off keeps the whole budget for output.
+        config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_budget=0)
     resp = client.models.generate_content(
         model=_GEMINI_MODEL,
         contents=user,
-        config=genai_types.GenerateContentConfig(
-            system_instruction=system,
-            max_output_tokens=max_tokens,
-        ),
+        config=genai_types.GenerateContentConfig(**config_kwargs),
     )
     text = resp.text
     if not text:
@@ -69,20 +83,23 @@ def _complete_gemini(system: str, user: str, max_tokens: int) -> str:
     return text
 
 
-def _complete_groq(system: str, user: str, max_tokens: int) -> str:
+def _complete_groq(system: str, user: str, max_tokens: int, json_mode: bool = False) -> str:
     client = _get_groq_client()
-    resp = client.chat.completions.create(
-        model=_GROQ_MODEL,
-        max_completion_tokens=max_tokens,
-        messages=[
+    kwargs: dict = {
+        "model": _GROQ_MODEL,
+        "max_completion_tokens": max_tokens,
+        "messages": [
             {"role": "system", "content": system},
             {"role": "user", "content": user},
         ],
-    )
+    }
+    if json_mode:
+        kwargs["response_format"] = {"type": "json_object"}
+    resp = client.chat.completions.create(**kwargs)
     return resp.choices[0].message.content or ""
 
 
-def complete(system: str, user: str, max_tokens: int = 4096) -> str:
+def complete(system: str, user: str, max_tokens: int = 4096, json_mode: bool = False) -> str:
     """One-shot completion, returns the raw text response.
 
     Tries Gemini first; falls back to Groq only if Gemini raises. Any Groq
@@ -90,27 +107,39 @@ def complete(system: str, user: str, max_tokens: int = 4096) -> str:
     Actions log) sees it rather than the run silently producing nothing.
     """
     try:
-        return _complete_gemini(system, user, max_tokens)
+        return _complete_gemini(system, user, max_tokens, json_mode=json_mode)
     except Exception as gemini_err:
         print(f"[llm_client] Gemini call failed ({gemini_err!r}), falling back to Groq")
         try:
-            return _complete_groq(system, user, max_tokens)
+            return _complete_groq(system, user, max_tokens, json_mode=json_mode)
         except Exception as groq_err:
             raise RuntimeError(
                 f"Both LLM providers failed. Gemini: {gemini_err!r}. Groq: {groq_err!r}"
             ) from groq_err
 
 
+def _parse_json(raw: str) -> dict:
+    # Defensive strip in case a model wraps its answer in fences anyway.
+    cleaned = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
+    return json.loads(cleaned)
+
+
 def complete_json(system: str, user: str, max_tokens: int = 4096) -> dict:
     """Completion where the system prompt has instructed strict-JSON-only output.
 
-    Strips markdown code fences defensively in case the model wraps its answer
-    anyway, then parses. Raises with the raw text attached if parsing fails so
-    the caller can log/debug rather than silently losing the day's run.
+    Runs its own Gemini -> Groq fallback (rather than going through complete())
+    so that an unparseable-but-"successful" Gemini response - not just a raised
+    exception - also triggers the Groq fallback instead of killing the run.
     """
-    raw = complete(system, user, max_tokens=max_tokens)
-    cleaned = re.sub(r"^```(?:json)?|```$", "", raw.strip(), flags=re.MULTILINE).strip()
     try:
-        return json.loads(cleaned)
-    except json.JSONDecodeError as e:
-        raise ValueError(f"LLM did not return valid JSON: {e}\n---raw---\n{raw}") from e
+        raw = _complete_gemini(system, user, max_tokens, json_mode=True)
+        return _parse_json(raw)
+    except Exception as gemini_err:
+        print(f"[llm_client] Gemini JSON call failed ({gemini_err!r}), falling back to Groq")
+        try:
+            raw = _complete_groq(system, user, max_tokens, json_mode=True)
+            return _parse_json(raw)
+        except Exception as groq_err:
+            raise RuntimeError(
+                f"Both LLM providers failed to produce valid JSON. Gemini: {gemini_err!r}. Groq: {groq_err!r}"
+            ) from groq_err

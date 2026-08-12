@@ -77,7 +77,7 @@ def select_and_cluster(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         + _format_candidates(items)
     )
 
-    result = complete_json(SYSTEM_PROMPT, user_prompt, max_tokens=4096)
+    result = complete_json(SYSTEM_PROMPT, user_prompt, max_tokens=8192)
     clusters = result.get("clusters", [])
 
     worthy_clusters = []
