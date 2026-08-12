@@ -82,7 +82,10 @@ taxonomy:
 scoring:
   score_threshold: 6.0        # candidates need >= this to reach the LLM select stage
   min_candidates: 3           # floor: if fewer than this clear the threshold, backfill by rank
-  max_candidates: 40          # ceiling: never send more than this many to the LLM select stage
+  max_candidates: 30          # ceiling: never send more than this many to the LLM select stage
+                              # (lowered from 40 on 2026-08-12: a 40-item select prompt is large
+                              # enough that a Groq fallback run - 12000 TPM on the free tier -
+                              # gets rejected with a 413 before it can even try. 30 leaves headroom.)
   recency_half_life_hours: 30 # engagement/recency decay half-life
   tier_weight:
     1: 5.0

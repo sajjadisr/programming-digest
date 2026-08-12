@@ -51,7 +51,14 @@ Include every input id exactly once across all clusters, worthy or not."""
 def _format_candidates(items: list[dict[str, Any]]) -> str:
     lines = []
     for it in items:
-        teaser = (it.get("summary") or "").replace("\n", " ").strip()[:280]
+        # Trimmed from 280 - at max_candidates=40 (config/feeds.yaml) the
+        # full-length version pushed this prompt's input tokens high enough
+        # that, combined with this call's 8192-token output budget, a Groq
+        # fallback run (12000 TPM on the free tier) got rejected outright
+        # with a 413 before it could even try. 140 chars is still enough for
+        # the LLM to judge relevance; the canonical article text isn't sent
+        # here at all, just enough to cluster and gate on.
+        teaser = (it.get("summary") or "").replace("\n", " ").strip()[:140]
         lines.append(
             f"- id: {it['id']}\n"
             f"  title: {it['title']}\n"
@@ -77,7 +84,14 @@ def select_and_cluster(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
         + _format_candidates(items)
     )
 
-    result = complete_json(SYSTEM_PROMPT, user_prompt, max_tokens=8192)
+    # 6144 rather than the original 8192: with the teaser trim above and
+    # config/feeds.yaml's max_candidates lowered to 30, the clustered output
+    # for a full batch comes in well under this, but it's still enough
+    # headroom to avoid the mid-object truncation that caused the very first
+    # version of this bug (see llm_client.py's docstring). Kept here instead
+    # of raised further because every token here also counts against Groq's
+    # per-minute cap when Gemini isn't available.
+    result = complete_json(SYSTEM_PROMPT, user_prompt, max_tokens=6144)
     clusters = result.get("clusters", [])
 
     worthy_clusters = []

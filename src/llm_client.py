@@ -26,6 +26,7 @@ import os
 import re
 
 from google import genai
+from google.genai import errors as genai_errors
 from google.genai import types as genai_types
 from groq import Groq
 
@@ -50,25 +51,8 @@ def _get_groq_client() -> Groq:
     return _groq_client
 
 
-def _complete_gemini(system: str, user: str, max_tokens: int, json_mode: bool = False) -> str:
+def _generate(config_kwargs: dict, user: str):
     client = _get_gemini_client()
-    config_kwargs: dict = {
-        "system_instruction": system,
-        "max_output_tokens": max_tokens,
-    }
-    if json_mode:
-        # Without this, "return only JSON" is just a suggestion in the prompt -
-        # the model is free to answer in prose instead (which is what caused
-        # it to write out a plain numbered list rather than the requested
-        # object). response_mime_type constrains decoding to valid JSON.
-        config_kwargs["response_mime_type"] = "application/json"
-        # gemini-flash-latest thinks by default, and thinking tokens are
-        # deducted from the same max_output_tokens budget as the visible
-        # answer. For a mechanical clustering/formatting task that doesn't
-        # need deliberation, that invisible spend was eating enough of the
-        # budget that the real answer got cut off mid-object on larger
-        # batches. Turning thinking off keeps the whole budget for output.
-        config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_budget=0)
     resp = client.models.generate_content(
         model=_GEMINI_MODEL,
         contents=user,
@@ -81,6 +65,37 @@ def _complete_gemini(system: str, user: str, max_tokens: int, json_mode: bool = 
         # falls back to Groq rather than choking on an empty string.
         raise RuntimeError(f"Gemini returned no text (finish_reason={resp.candidates[0].finish_reason if resp.candidates else 'unknown'})")
     return text
+
+
+def _complete_gemini(system: str, user: str, max_tokens: int, json_mode: bool = False) -> str:
+    config_kwargs: dict = {
+        "system_instruction": system,
+        "max_output_tokens": max_tokens,
+    }
+    if json_mode:
+        # Without this, "return only JSON" is just a suggestion in the prompt -
+        # the model is free to answer in prose instead (which is what caused
+        # it to write out a plain numbered list rather than the requested
+        # object). response_mime_type constrains decoding to valid JSON.
+        config_kwargs["response_mime_type"] = "application/json"
+        # thinking_budget=0 turns off thinking so the whole max_output_tokens
+        # budget goes to the visible answer, not invisible reasoning tokens.
+        # This is a Gemini 2.5-era parameter. GEMINI_MODEL is set to the
+        # "-latest" alias, which Google resolves server-side and can (and, on
+        # 2026-08-12, did) silently roll onto a new model family - Gemini 3+
+        # replaced thinking_budget with thinking_level and rejects the old
+        # parameter outright with a 400 INVALID_ARGUMENT. Rather than hardcode
+        # a model-name check that the next alias flip would just as silently
+        # invalidate, try the modern param first and fall back live.
+        config_kwargs["thinking_config"] = genai_types.ThinkingConfig(thinking_budget=0)
+    try:
+        return _generate(config_kwargs, user)
+    except genai_errors.ClientError as e:
+        if json_mode and "thinking_config" in config_kwargs:
+            print(f"[llm_client] {_GEMINI_MODEL} rejected thinking_config ({e!r}); retrying without it")
+            config_kwargs.pop("thinking_config", None)
+            return _generate(config_kwargs, user)
+        raise
 
 
 def _complete_groq(system: str, user: str, max_tokens: int, json_mode: bool = False) -> str:
