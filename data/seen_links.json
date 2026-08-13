@@ -1,1 +1,7 @@
-[]
+[
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
+  "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
+  "https://vercel.com/blog/building-a-software-factory-for-ai-sdk",
+  "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build",
+  "https://vercel.com/changelog/introducing-agent-plugins-1-0-0"
+]
