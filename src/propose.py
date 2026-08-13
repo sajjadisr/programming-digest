@@ -28,6 +28,7 @@ from utils import (
     LAST_RUN_PATH,
     PENDING_ITEMS_PATH,
     SEEN_LINKS_PATH,
+    anti_ai_guide,
     env,
     load_feeds_config,
     load_json,
@@ -71,6 +72,7 @@ def main() -> None:
               f"({deferred} deferred to a future run)")
 
     guide = register_guide()
+    anti_ai = anti_ai_guide()
     taxonomy = config.get("taxonomy", [])
 
     final_items = []
@@ -84,14 +86,15 @@ def main() -> None:
         # marked seen, so it's picked up again next run.
         try:
             article_text, is_full = fetch_article_text(cluster["url"], cluster.get("summary", ""))
-            written = write_item(cluster, article_text, is_full, guide, taxonomy)
+            written = write_item(cluster, article_text, is_full, guide, anti_ai, taxonomy)
         except Exception as e:
             print(f"[propose]   SKIPPED {cluster.get('title', '?')[:60]!r}: {e!r}")
             continue
         final_items.append(written)
         print(
             f"[propose]   wrote: {written['title_fa'][:60]!r} "
-            f"(full_article={is_full}, fact_issues={len(written['fact_check_issues'])})"
+            f"(full_article={is_full}, style_flags={len(written['style_flags_found'])}, "
+            f"fact_issues={len(written['fact_check_issues'])})"
         )
         # Cheap pacing: write_item() is 2-3 LLM calls, and Groq's free-tier
         # limit is per-minute (TPM). Spacing items out a couple seconds keeps

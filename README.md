@@ -21,9 +21,11 @@ select_llm.py      Stage 3a: ONE LLM call — cluster same-story duplicates
                    across sources, judge which clusters are worthy
 article_fetch.py  fetches full article text for the write stage (teaser
                    fallback on paywalls / JS-heavy pages)
-write_llm.py       Stage 3b: draft -> regex pre-check (Arabic chars, formal
-                   markers) -> LLM register self-check -> LLM fact-grounding
-                   self-check
+write_llm.py       Stage 3b: draft (prompted with the register guide AND the
+                   anti-AI-writing guide) -> mechanical pre-check (Arabic
+                   chars, curly quotes, formal markers, Persian AI-cliché
+                   phrases, dashes) -> LLM register+anti-AI style self-check
+                   -> LLM fact-grounding self-check
 deliver.py        Stage 4: Telegram DMs — first message notifies, rest
                    silent; source link on every option; zero-day ping
 pick_logger.py     Stage 5: polls Telegram for pick/reject button taps,
@@ -91,6 +93,16 @@ their actual content:
   `write_llm.py` just loads it as a raw string.
 - **`config/telegram_formatting.md`** — same situation for
   `TELEGRAM_FORMATTING`.
+- **`config/persian_anti_ai_patterns.md`** — not a placeholder for a missing
+  external file (there's no equivalent referenced in the review), this one's
+  authored for this project: a Persian-specific catalog of the words,
+  sentence habits, and typographic tells that read as AI-generated, adapted
+  from the `humanizer` skill's English-language pattern taxonomy since most
+  of that taxonomy's specific tell-words don't transfer across languages.
+  `write_llm.py` loads it the same way as `register.md` (raw string, into
+  both the draft prompt and the style self-check prompt) and it's meant to
+  grow the same way — add to it if the channel develops its own sense of
+  what reads as AI-written.
 
 Everything else — sourcing tiers, scoring formula, the select/write split,
 the two self-check passes, delivery behavior, pick logging, the GitHub

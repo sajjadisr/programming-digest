@@ -32,6 +32,10 @@ def register_guide() -> str:
     return load_text(CONFIG_DIR / "register.md")
 
 
+def anti_ai_guide() -> str:
+    return load_text(CONFIG_DIR / "persian_anti_ai_patterns.md")
+
+
 def telegram_formatting_guide() -> str:
     return load_text(CONFIG_DIR / "telegram_formatting.md")
 
