@@ -114,7 +114,14 @@ def _fact_grounding_self_check(draft: dict[str, str], article_text: str,
         f"Source material ({'full article' if is_full_article else 'teaser only'}):\n"
         f"{article_text}"
     )
-    return complete_json(system, user, max_tokens=1024)
+    # Checking several distinct claims against source text is a harder,
+    # more multi-step task than drafting or the register pass - on Groq this
+    # visibly needs more reasoning-token headroom before it gets to the JSON
+    # answer (see llm_client.py's reasoning_effort comment). 1024 was too
+    # tight even for the "ok": true happy path once a model actually had to
+    # reason about it; 2560 leaves real room for the {"ok": false, "issues":
+    # [...], "corrected_title_fa": ..., "corrected_body_fa": ...} case too.
+    return complete_json(system, user, max_tokens=2560)
 
 
 def write_item(item: dict[str, Any], article_text: str, is_full_article: bool,

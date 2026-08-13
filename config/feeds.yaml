@@ -86,6 +86,14 @@ scoring:
                               # (lowered from 40 on 2026-08-12: a 40-item select prompt is large
                               # enough that a Groq fallback run - 12000 TPM on the free tier -
                               # gets rejected with a 413 before it can even try. 30 leaves headroom.)
+  max_write_per_run: 8        # ceiling: never take more than this many worthy clusters into the
+                              # write stage in one run. Added 2026-08-12: write_item() costs 2-3
+                              # LLM calls each (draft, optional register fix, fact-check), so a
+                              # busy-news-day select result (seen as high as 23 worthy clusters)
+                              # can need 45+ calls - comfortably past Gemini's free-tier daily cap
+                              # (as low as 20/day) and risking Groq's 12000 TPM too if they fire
+                              # back-to-back. Extras aren't lost: they're just not marked "seen",
+                              # so uncapped clusters simply resurface as candidates next run.
   recency_half_life_hours: 30 # engagement/recency decay half-life
   tier_weight:
     1: 5.0

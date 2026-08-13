@@ -13,6 +13,7 @@ State persisted for the next run / for pick_logger.py:
 from __future__ import annotations
 
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -57,18 +58,47 @@ def main() -> None:
     worthy_clusters = select_and_cluster(scored)
     print(f"[propose] {len(worthy_clusters)} clusters judged worthy by the LLM select stage")
 
+    # Cap + prioritize before spending any LLM calls on the write stage - see
+    # config/feeds.yaml's max_write_per_run comment for why. Clusters left
+    # over aren't lost or marked seen, so they're just candidates again next
+    # run (module-fresh Gemini daily quota and all).
+    max_write = config["scoring"].get("max_write_per_run")
+    if max_write and len(worthy_clusters) > max_write:
+        worthy_clusters = sorted(worthy_clusters, key=lambda c: c.get("mech_score", 0), reverse=True)
+        deferred = len(worthy_clusters) - max_write
+        worthy_clusters = worthy_clusters[:max_write]
+        print(f"[propose] capping write stage to top {max_write} by mech_score "
+              f"({deferred} deferred to a future run)")
+
     guide = register_guide()
     taxonomy = config.get("taxonomy", [])
 
     final_items = []
-    for cluster in worthy_clusters:
-        article_text, is_full = fetch_article_text(cluster["url"], cluster.get("summary", ""))
-        written = write_item(cluster, article_text, is_full, guide, taxonomy)
+    for i, cluster in enumerate(worthy_clusters):
+        # One item hitting a rate limit or an unparseable LLM response
+        # shouldn't cost the whole run - previously an exception here
+        # propagated out of main(), so send_daily_options() never ran and
+        # every item already written that run (plus all of today's mechanical
+        # scoring/select-stage LLM spend) was thrown away, and next run would
+        # just redo the same work. Log and skip instead; a skipped item isn't
+        # marked seen, so it's picked up again next run.
+        try:
+            article_text, is_full = fetch_article_text(cluster["url"], cluster.get("summary", ""))
+            written = write_item(cluster, article_text, is_full, guide, taxonomy)
+        except Exception as e:
+            print(f"[propose]   SKIPPED {cluster.get('title', '?')[:60]!r}: {e!r}")
+            continue
         final_items.append(written)
         print(
             f"[propose]   wrote: {written['title_fa'][:60]!r} "
             f"(full_article={is_full}, fact_issues={len(written['fact_check_issues'])})"
         )
+        # Cheap pacing: write_item() is 2-3 LLM calls, and Groq's free-tier
+        # limit is per-minute (TPM). Spacing items out a couple seconds keeps
+        # a full batch from landing in the same rate-limit window instead of
+        # spread across it - costs at most ~max_write_per_run * 2 seconds.
+        if i < len(worthy_clusters) - 1:
+            time.sleep(2)
 
     send_daily_options(token, chat_id, final_items)
     print(f"[propose] sent {len(final_items)} option(s) to Telegram (or a zero-day ping)")
