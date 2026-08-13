@@ -1,1 +1,53 @@
-{}
+{
+  "557818547b5e5732": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.1.224",
+    "title_fa": "Claude Code انتشار",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.224"
+  },
+  "5988764d8f0ffbbf": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "Building a software factory for AI SDK",
+    "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
+    "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "7343769f73c7872e": {
+    "tags": [
+      "ai_coding_tools",
+      "security",
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "title": "A sandbox without a network boundary is only half a sandbox",
+    "title_fa": "جزئیات دیوار آتش Vercel Sandbox برای مدیریت ترافیک ایجنت‌های AI",
+    "url": "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox"
+  },
+  "8291cda65cb5a9b0": {
+    "tags": [
+      "databases",
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "title": "How we migrated the database behind every Vercel build",
+    "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
+    "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
+  },
+  "fa338529a0424327": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "Introducing Agent Plugins 1.0.0",
+    "title_fa": "معرفی Agent Plugins 1.0.0",
+    "url": "https://vercel.com/changelog/introducing-agent-plugins-1-0-0"
+  }
+}
