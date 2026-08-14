@@ -1,4 +1,14 @@
 {
+  "16a148424ca89d2f": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "languages_runtimes"
+    ],
+    "title": "Bun runtime for Vercel Functions now accepts Bun.serve as an entrypoint",
+    "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
+    "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
+  },
   "557818547b5e5732": {
     "tags": [
       "ai_coding_tools",
@@ -18,6 +28,16 @@
     "title": "Building a software factory for AI SDK",
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "6d9f931d3f4a007e": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.1.232",
+    "title_fa": "انتشار به‌روزرسانی جدید Claude Code",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
   },
   "7343769f73c7872e": {
     "tags": [
@@ -39,6 +59,26 @@
     "title": "How we migrated the database behind every Vercel build",
     "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
     "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
+  },
+  "8ca8a76f53c97c47": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "Grok Build is now available in the AI SDK harness layer",
+    "title_fa": "پشتیبانی از Grok Build در لایه Harness کتابخانه AI SDK",
+    "url": "https://vercel.com/changelog/grok-build-harness-adapter"
+  },
+  "ddedb9025e1c631d": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "title": "Vercel Sandbox now runs on Vercel Managed Images",
+    "title_fa": "معرفی Vercel Managed Images برای محیط‌های Vercel Sandbox",
+    "url": "https://vercel.com/changelog/vercel-sandbox-managed-images"
   },
   "fa338529a0424327": {
     "tags": [
