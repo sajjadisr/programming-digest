@@ -1,4 +1,15 @@
 {
+  "1113be99a66eb462": {
+    "tags": [
+      "security",
+      "ai_coding_tools",
+      "open_source_releases",
+      "dev_tooling_build_systems"
+    ],
+    "title": "Everything hackable will get hacked",
+    "title_fa": "بررسی امنیت کدها با هوش مصنوعی؛ هشدار ورسل درباره نسل جدید مدل‌ها",
+    "url": "https://vercel.com/blog/everything-hackable-will-get-hacked"
+  },
   "16a148424ca89d2f": {
     "tags": [
       "dev_tooling_build_systems",
@@ -60,6 +71,16 @@
     "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
     "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
   },
+  "852623ba39363dc8": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "infra_cloud"
+    ],
+    "title": "Set up coding agents in one command with AI Gateway",
+    "title_fa": "تنظیم یکپارچه agentهای برنامه‌نویسی با Vercel AI Gateway",
+    "url": "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway"
+  },
   "8ca8a76f53c97c47": {
     "tags": [
       "ai_coding_tools",
@@ -70,6 +91,16 @@
     "title_fa": "پشتیبانی از Grok Build در لایه Harness کتابخانه AI SDK",
     "url": "https://vercel.com/changelog/grok-build-harness-adapter"
   },
+  "b56da077d21ad4f4": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.1.233",
+    "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+  },
   "ddedb9025e1c631d": {
     "tags": [
       "dev_tooling_build_systems",
@@ -79,6 +110,16 @@
     "title": "Vercel Sandbox now runs on Vercel Managed Images",
     "title_fa": "معرفی Vercel Managed Images برای محیط‌های Vercel Sandbox",
     "url": "https://vercel.com/changelog/vercel-sandbox-managed-images"
+  },
+  "e6f670ec6fc21692": {
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems",
+      "security"
+    ],
+    "title": "The V8 Sandbox",
+    "title_fa": "خروج V8 Sandbox از فاز آزمایشی و ورود به برنامه باگ‌بونتی کروم",
+    "url": "https://v8.dev/blog/sandbox"
   },
   "fa338529a0424327": {
     "tags": [

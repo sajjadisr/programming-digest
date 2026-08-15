@@ -1,12 +1,16 @@
 [
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+  "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+  "https://v8.dev/blog/sandbox",
   "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
   "https://vercel.com/blog/building-a-software-factory-for-ai-sdk",
+  "https://vercel.com/blog/everything-hackable-will-get-hacked",
   "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build",
   "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions",
   "https://vercel.com/changelog/grok-build-harness-adapter",
   "https://vercel.com/changelog/introducing-agent-plugins-1-0-0",
+  "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway",
   "https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer",
   "https://vercel.com/changelog/vercel-sandbox-managed-images"
 ]
