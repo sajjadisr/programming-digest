@@ -5,6 +5,7 @@
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
   "https://github.com/denoland/deno/releases/tag/v2.9.5",
+  "https://github.com/nodejs/node/releases/tag/v26.7.0",
   "https://github.com/vercel/next.js/releases/tag/v16.3.1",
   "https://v8.dev/blog/sandbox",
   "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
@@ -15,7 +16,9 @@
   "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions",
   "https://vercel.com/changelog/grok-build-harness-adapter",
   "https://vercel.com/changelog/introducing-agent-plugins-1-0-0",
+  "https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler",
   "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway",
+  "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc",
   "https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer",
   "https://vercel.com/changelog/vercel-sandbox-managed-images"
 ]

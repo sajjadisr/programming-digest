@@ -38,6 +38,16 @@
     "title_fa": "انتشار نسخه 2.9.5 Deno با پشتیبانی آزمایشی از QuickJS",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.5"
   },
+  "52e399a396eacfb9": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "ai_coding_tools",
+      "frontend_frameworks"
+    ],
+    "title": "Latest MCP spec now supported in mcp-handler",
+    "title_fa": "پشتیبانی mcp-handler از آخرین نسخه مشخصات MCP",
+    "url": "https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler"
+  },
   "557818547b5e5732": {
     "tags": [
       "ai_coding_tools",
@@ -89,6 +99,16 @@
     "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
     "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
   },
+  "8367f03f9ea82010": {
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases",
+      "dev_tooling_build_systems"
+    ],
+    "title": "2026-08-05, Version 26.7.0 (Current), @aduh95",
+    "title_fa": "انتشار تغییرات جدید Node.js با پشتیبانی از Perfetto و بهبود ابزارهای تست",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.7.0"
+  },
   "852623ba39363dc8": {
     "tags": [
       "ai_coding_tools",
@@ -118,6 +138,16 @@
     "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
     "title_fa": "بازنویسی فریم‌ورک Hydrogen با همکاری Shopify و Vercel",
     "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts"
+  },
+  "a917fe9d4717cb0c": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "security"
+    ],
+    "title": "Turborepo and Vercel Remote Cache now support OpenID Connect (OIDC)",
+    "title_fa": "پشتیبانی از OIDC در Turborepo و Vercel Remote Cache",
+    "url": "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc"
   },
   "b56da077d21ad4f4": {
     "tags": [
