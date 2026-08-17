@@ -60,8 +60,12 @@ def main() -> None:
             print(f"  {it['mech_score']:5.2f}  {it['source']:20s} {it['title'][:70]}")
 
         if mode == "select":
+            from feedback import build_feedback_block
             from select_llm import select_and_cluster
-            worthy = select_and_cluster(scored)
+            feedback_block = build_feedback_block()
+            if feedback_block:
+                print(f"\n(including past pick/reject history as select-stage feedback)")
+            worthy = select_and_cluster(scored, feedback_block=feedback_block)
             print(f"\n{len(worthy)} clusters judged worthy:")
             for c in worthy:
                 print(f"  {c['title'][:70]}  <- {c['select_reason']}")
