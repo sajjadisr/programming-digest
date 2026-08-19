@@ -28,6 +28,18 @@
     "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
     "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
   },
+  "490df380f7073537": {
+    "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
+    "source": "releases:redis/redis",
+    "tags": [
+      "databases",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "8.10.1",
+    "title_fa": "به‌روزرسانی امنیتی Redis",
+    "url": "https://github.com/redis/redis/releases/tag/8.10.1"
+  },
   "4920be8cc626b3cd": {
     "tags": [
       "languages_runtimes",
@@ -37,6 +49,18 @@
     "title": "v2.9.5",
     "title_fa": "انتشار نسخه 2.9.5 Deno با پشتیبانی آزمایشی از QuickJS",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.5"
+  },
+  "4ba778657c38aa67": {
+    "select_reason": "Substantive technical insight from Cloudflare on shifting bot/agent traffic mitigation from point-in-time risk evaluation to continuous trust tracking.",
+    "source": "cloudflare_blog",
+    "tags": [
+      "infra_cloud",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Unveiling good and bad behaviors on the Agentic Internet",
+    "title_fa": "استراتژی جدید کلادفلر برای تشخیص بات‌ها در عصر ایجنت‌های هوشمند",
+    "url": "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/"
   },
   "52e399a396eacfb9": {
     "tags": [
@@ -67,6 +91,18 @@
     "title": "Building a software factory for AI SDK",
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "6ae64bcd99a19b4f": {
+    "select_reason": "Useful practical tooling article from official Kubernetes blog regarding manifest formatting and readability standards.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "How to Pretty-Print Your Kubernetes YAML as KYAML and Why You'd Want To",
+    "title_fa": "معرفی KYAML: فرمت صریح‌تر برای کانفیگ‌های کوبرنتیس",
+    "url": "https://kubernetes.io/blog/2026/08/11/how-to-pretty-print-kubernetes-yaml-as-kyaml/"
   },
   "6d9f931d3f4a007e": {
     "tags": [
