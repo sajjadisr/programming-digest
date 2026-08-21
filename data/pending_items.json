@@ -195,6 +195,18 @@
     "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
   },
+  "c111c3d3a6c180fb": {
+    "select_reason": "Bun v1.4 is a major major release for a key JavaScript runtime.",
+    "source": "releases:oven-sh/bun",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Bun v1.4",
+    "title_fa": "انتشار Bun 1.4.0",
+    "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0"
+  },
   "c11339a5907d2057": {
     "tags": [
       "frontend_frameworks",
