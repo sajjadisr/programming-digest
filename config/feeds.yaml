@@ -17,7 +17,7 @@ aggregators:
     url: https://dev.to/feed
     tier: 3
     # dev.to is noisy; keep filtering tight via taxonomy keyword match in score.py
-    filter_tags: [programming, webdev, javascript, python, rust, ai, opensource]
+    filter_tags: [programming, webdev, javascript, python, rust, go, java, php, security, opensource]
 
 reddit:
   # tier: aggregator-adjacent, filtered as hard as dev.to.
@@ -29,9 +29,24 @@ reddit:
     - golang
     - Python
     - node
+    - java
+    - csharp
+    - php
+    - webdev
+    - devops
+    - database
 
 vendor_blogs:
   # tier: primary source — vendor's own announcement of their own work.
+  #
+  # 2026-08-15: this list used to be Vercel-heavy relative to everyone else
+  # (one prolific feed vs. several low-frequency ones), which combined with
+  # tier 1's scoring weight meant Vercel alone could flood a day's shortlist.
+  # Added a real spread across clouds/platforms (Cloudflare, GitHub, Docker,
+  # Kubernetes), languages/frameworks (.NET, Kotlin/JVM), and web frameworks
+  # (Django) so no single vendor's posting cadence can dominate by default —
+  # see also scoring.max_per_source_per_run below, which caps this
+  # mechanically regardless of how the feed list evolves.
   tier: 1
   feeds:
     - name: nodejs_blog
@@ -46,10 +61,29 @@ vendor_blogs:
       url: https://blog.rust-lang.org/feed.xml
     - name: go_blog
       url: https://go.dev/blog/feed.atom
+    - name: cloudflare_blog
+      url: https://blog.cloudflare.com/rss/
+    - name: github_blog
+      url: https://github.blog/feed/
+    - name: docker_blog
+      url: https://blog.docker.com/feed/
+    - name: kubernetes_blog
+      url: https://kubernetes.io/feed.xml
+    - name: django_blog
+      url: https://www.djangoproject.com/rss/weblog/
+    - name: dotnet_blog
+      url: https://devblogs.microsoft.com/dotnet/feed/
+    - name: kotlin_blog
+      url: https://blog.jetbrains.com/kotlin/feed/
 
 release_feeds:
   # tier: highest precision — the changelog IS the news. Free, no key, per-repo Atom feed.
   # Add/remove repos to match what your audience actually tracks.
+  #
+  # Broadened 2026-08-15 alongside vendor_blogs, same reasoning: more
+  # ecosystems represented (JVM/Kotlin, .NET, PHP, Java, databases, more
+  # frontend frameworks) so the shortlist isn't structurally dependent on
+  # whichever handful of repos happened to ship that week.
   tier: 1
   repos:
     - microsoft/vscode
@@ -66,17 +100,42 @@ release_feeds:
     - tailwindlabs/tailwindcss
     - vercel/next.js
     - anthropics/claude-code
+    - kubernetes/kubernetes
+    - django/django
+    - dotnet/core
+    - spring-projects/spring-boot
+    - JetBrains/kotlin
+    - sveltejs/svelte
+    - angular/angular
+    - redis/redis
+    - laravel/laravel
+    - astro-build/astro
 
 taxonomy:
-  # used both for keyword-match scoring and for the LLM select/write prompts
-  - languages_runtimes
-  - frontend_frameworks
-  - ai_coding_tools
-  - dev_tooling_build_systems
-  - infra_cloud
-  - databases
-  - security
-  - open_source_releases
+  # used both for keyword-match scoring (score.py) and for the LLM select/write
+  # prompts. `key` is the stable English slug used internally everywhere
+  # (score.py, select_llm.py, write_llm.py's "tags" field). `label_fa` is the
+  # ONLY Persian text for this tag deliver.py will ever show — a single
+  # compact, hashtag-safe word/compound, never a sentence-length phrase. This
+  # is deliberately code-enforced (deliver.py maps key -> label_fa directly)
+  # rather than left to the writing LLM, so hashtags are always Persian and
+  # always exactly this wording, regardless of what any given draft does.
+  - key: languages_runtimes
+    label_fa: زبان_برنامه‌نویسی
+  - key: frontend_frameworks
+    label_fa: فرانت‌اند
+  - key: ai_coding_tools
+    label_fa: هوش‌مصنوعی
+  - key: dev_tooling_build_systems
+    label_fa: ابزار_توسعه
+  - key: infra_cloud
+    label_fa: زیرساخت
+  - key: databases
+    label_fa: پایگاه‌داده
+  - key: security
+    label_fa: امنیت
+  - key: open_source_releases
+    label_fa: متن‌باز
 
 # --- mechanical score & filter tuning ---
 scoring:
@@ -94,6 +153,19 @@ scoring:
                               # (as low as 20/day) and risking Groq's 12000 TPM too if they fire
                               # back-to-back. Extras aren't lost: they're just not marked "seen",
                               # so uncapped clusters simply resurface as candidates next run.
+  max_per_source_per_run: 2   # NEW 2026-08-15: diversity guardrail. No single source (most often
+                              # one vendor blog with an unusually prolific week) can fill more than
+                              # this many of a run's final slots, no matter how many of its items
+                              # clear the mechanical score and the LLM's worthy bar. Applied in
+                              # propose.py AFTER select_llm.py's judgment, BEFORE max_write_per_run.
+                              # Same "nothing is lost" property as max_write_per_run: capped items
+                              # just aren't marked seen, so they're candidates again next run.
+  max_ai_coding_tools_per_run: 2  # NEW 2026-08-15: this channel's picks were nearly always
+                              # AI-coding-tool news (agent features, SDK adapters, sandbox tweaks)
+                              # crowding out general programming news. select_llm.py's SYSTEM_PROMPT
+                              # now also holds this category to a higher worthiness bar (major news
+                              # only), but this is the hard mechanical backstop regardless of how
+                              # many such items the LLM judges worthy. Same defer-not-drop behavior.
   recency_half_life_hours: 30 # engagement/recency decay half-life
   tier_weight:
     1: 5.0

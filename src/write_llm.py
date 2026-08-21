@@ -62,6 +62,38 @@ _CURLY_TO_STRAIGHT_QUOTES = {
 # does NOT try to make well - it's a last-resort net, not the primary fix.
 _DASH_PATTERN = re.compile(r"\s+--\s+|—|–")
 
+# Persian sentence boundaries, for the Latin-script-density check below. Only
+# splits on a period when it's followed by whitespace and then a Persian
+# letter - a bare "\." would also split inside Latin identifiers/URLs like
+# "Bun.serve()" or "v2.1.224", which aren't sentence boundaries at all.
+_PERSIAN_SENTENCE_SPLIT = re.compile(r"(?<=[؟!؛])\s+|(?<=\.)\s+(?=[\u0600-\u06FF])")
+
+# A maximal run of Latin-script words - one technical term/identifier, OR
+# several Latin words in a row separated only by whitespace with no Persian
+# text between them (e.g. "Claude Code", "Vercel Functions", "Grok Build").
+# The latter case matters: a two-word product name is ONE entity and one
+# direction-switch for an RTL reader, not two - only a Persian word breaking
+# up two Latin words is a separate switch. This is what's actually being
+# counted below, not raw word count.
+_LATIN_RUN = re.compile(
+    r"[A-Za-z][A-Za-z0-9_.@/+#-]*(?:\(\))?(?:\s+[A-Za-z][A-Za-z0-9_.@/+#-]*(?:\(\))?)*"
+)
+
+# More than this many distinct Latin-script runs in a single sentence is what
+# actually made the flagged example unreadable ("Bun runtime تو Vercel
+# Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره" has 3: "Bun
+# runtime", "Vercel Functions", "Bun.serve()") - the RTL/LTR direction
+# switches back and forth once per run, which is what's fatiguing to read,
+# not any single English word on its own. See persian_anti_ai_patterns.md's
+# new section on this for the fix the style pass should apply.
+_MAX_LATIN_CHUNKS_PER_SENTENCE = 2
+
+# Hard cap on how many hashtags an item ships with, enforced here as well as
+# in deliver.py (which also translates them to Persian) - two independent
+# backstops on the same limit, consistent with this file's general "flag/cap
+# mechanically, don't just hope the prompt is followed" approach.
+_MAX_TAGS = 2
+
 # Formal/literary markers worth flagging for the style self-check pass.
 # Not auto-fixed (rewriting around them requires judgment), just surfaced.
 _FORMAL_MARKERS = [
@@ -116,15 +148,39 @@ def _dash_fallback(text: str) -> str:
     return text
 
 
+def _flag_dense_latin_runs(text: str) -> list[str]:
+    """Flags any sentence packing more than _MAX_LATIN_CHUNKS_PER_SENTENCE
+    separate Latin-script runs into it - the RTL-readability failure mode
+    where several English words/identifiers are scattered through one
+    Persian sentence with only a word or two of Persian between them each
+    time. A multi-word product name ("Vercel Functions") counts as ONE run,
+    not one per word - see _LATIN_RUN above. Returns one flag string per
+    offending sentence (with the sentence itself included) so the style pass
+    has the actual text to restructure, not just a category name."""
+    flags = []
+    for sentence in _PERSIAN_SENTENCE_SPLIT.split(text):
+        chunks = _LATIN_RUN.findall(sentence)
+        if len(chunks) > _MAX_LATIN_CHUNKS_PER_SENTENCE:
+            flags.append(
+                f"English-term density ({len(chunks)} separate Latin-script "
+                f"terms in one sentence - restructure so at most "
+                f"{_MAX_LATIN_CHUNKS_PER_SENTENCE} appear per sentence; see "
+                f"persian_anti_ai_patterns.md's density section): "
+                f"{sentence.strip()[:120]}"
+            )
+    return flags
+
+
 def _flag_style_issues(text: str) -> list[str]:
     """Judgment-required issues found by exact-phrase/pattern match - just
-    surfaced for the style self-check pass to fix in context. Covers three
+    surfaced for the style self-check pass to fix in context. Covers four
     distinct failure modes: literary/formal register, AI-cliché vocabulary,
-    and leftover English-style dashes."""
+    leftover English-style dashes, and RTL-unreadable English-term density."""
     flags = [m for m in _FORMAL_MARKERS if m in text]
     flags += [p for p in _AI_CLICHE_PHRASES if p in text]
     if _DASH_PATTERN.search(text):
         flags.append("em/en dash (—/–) - restructure the sentence around it")
+    flags += _flag_dense_latin_runs(text)
     return flags
 
 
@@ -144,7 +200,11 @@ def _draft(item: dict[str, Any], article_text: str, is_full_article: bool,
         "Return ONLY valid JSON (no markdown fences): "
         '{"title_fa": "...", "body_fa": "...", "tags": ["..."]}. '
         "body_fa should be 3-5 sentences: what happened, why it matters to a "
-        "developer, and what changed vs before, if relevant."
+        "developer, and what changed vs before, if relevant. "
+        f"tags: at most {_MAX_TAGS} - the single most relevant categor"
+        f"{'y' if _MAX_TAGS == 1 else 'ies'}, not every tag that could "
+        "technically apply; these become hashtags on the channel, so more "
+        "isn't better."
     )
     source_note = (
         "Full article text below." if is_full_article
@@ -258,7 +318,10 @@ def write_item(item: dict[str, Any], article_text: str, is_full_article: bool,
         **item,
         "title_fa": final_title,
         "body_fa": final_body,
-        "tags": revised.get("tags", []),
+        # Capped here as a backstop on top of the prompt instruction above -
+        # deliver.py caps again independently when it also translates these
+        # to Persian, so the limit holds even if one layer is skipped.
+        "tags": (revised.get("tags") or [])[:_MAX_TAGS],
         "style_flags_found": style_flags,
         "fact_check_issues": fact_issues,
         "used_full_article": is_full_article,

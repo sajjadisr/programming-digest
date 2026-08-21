@@ -16,22 +16,37 @@ that source document.
 sourcing.py       Stage 1: pull candidates from release feeds, vendor blogs,
                    HN, Lobsters, dev.to, Reddit
 score.py          Stage 2: mechanical score + seen-link filter + threshold
-                   with floor/ceiling
+                   with floor/ceiling; also a cheap keyword-based taxonomy
+                   guess per item (score.py's TAXONOMY_KEYWORDS), used only
+                   for propose.py's mechanical diversity caps below, not
+                   sent to any LLM
+feedback.py        turns data/picks.jsonl into a compact block of past
+                   human pick/reject decisions, prepended to select_llm.py's
+                   prompt as calibration signal
 select_llm.py      Stage 3a: ONE LLM call — cluster same-story duplicates
-                   across sources, judge which clusters are worthy
+                   across sources, judge which clusters are worthy (bar
+                   includes broad-relevance and AI-coding-tools-specific
+                   scrutiny, weighted by feedback.py's history if any)
 article_fetch.py  fetches full article text for the write stage (teaser
                    fallback on paywalls / JS-heavy pages)
 write_llm.py       Stage 3b: draft (prompted with the register guide AND the
                    anti-AI-writing guide) -> mechanical pre-check (Arabic
                    chars, curly quotes, formal markers, Persian AI-cliché
-                   phrases, dashes) -> LLM register+anti-AI style self-check
-                   -> LLM fact-grounding self-check
+                   phrases, dashes, dense scattered Latin-script terms) ->
+                   LLM register+anti-AI style self-check -> LLM
+                   fact-grounding self-check
 deliver.py        Stage 4: Telegram DMs — first message notifies, rest
-                   silent; source link on every option; zero-day ping
+                   silent; source link on every option; zero-day ping;
+                   renders "tags" as capped, Persian-translated hashtags
+                   (config/feeds.yaml's taxonomy -> label_fa)
 pick_logger.py     Stage 5: polls Telegram for pick/reject button taps,
-                   logs to data/picks.jsonl
-propose.py         ties stages 1-4 together; run daily by
-                   .github/workflows/propose.yml
+                   logs to data/picks.jsonl (with enough context - source,
+                   taxonomy guess, select reason - for feedback.py to use)
+propose.py         ties stages 1-4 together, plus two mechanical diversity
+                   caps applied after select_llm.py's judgment and before
+                   the write stage (config/feeds.yaml's
+                   max_per_source_per_run / max_ai_coding_tools_per_run);
+                   run daily by .github/workflows/propose.yml
 collect_picks.py   runs pick_logger.py; run every ~15 min by
                    .github/workflows/collect_picks.yml
 ```
@@ -39,8 +54,9 @@ collect_picks.py   runs pick_logger.py; run every ~15 min by
 Flat-file state (`data/`), no database:
 - `seen_links.json` — every URL ever sent, so it never resurfaces
 - `pending_items.json` — today's shortlist, so a button tap later can be
-  matched back to its title/url/tags
-- `picks.jsonl` — the pick/reject log (append-only)
+  matched back to its title/url/tags/source/taxonomy-guess/select-reason
+- `picks.jsonl` — the pick/reject log (append-only) — **feeds back into
+  select_llm.py's next run via feedback.py**, it's not just a log anymore
 - `telegram_update_offset.txt` — Telegram `getUpdates` polling offset
 - `last_run.txt` — a heartbeat, see the note on GitHub's 60-day rule below
 
@@ -114,9 +130,24 @@ review document specifies.
 Edit `config/feeds.yaml` to add/remove:
 - tracked repos for release feeds (the highest-precision tier — this was the
   review's main flagged gap in the original plan)
-- vendor blogs, subreddits, dev.to tag filters
+- vendor blogs, subreddits, dev.to tag filters — deliberately spread across
+  more than one vendor/ecosystem (see `max_per_source_per_run` below for why
+  that matters even with a spread list)
+- `taxonomy`: a list of `{key, label_fa}`. `key` is the stable English slug
+  used internally (score.py's keyword table, write_llm.py's "tags" field);
+  `label_fa` is the ONLY Persian text that ends up in a hashtag — a single
+  compact, space-free word/compound, not a sentence. `deliver.py` maps
+  `key -> label_fa` directly, so hashtags are always Persian regardless of
+  what the writing LLM does. Add a taxonomy category here and it's usable
+  everywhere in one edit.
 - scoring knobs: `score_threshold`, `min_candidates`/`max_candidates` (the
-  floor/ceiling around the threshold cut), recency half-life, tier weights
+  floor/ceiling around the threshold cut), recency half-life, tier weights,
+  `max_per_source_per_run` (no single source fills more than this many of a
+  run's slots — the mechanical fix for one vendor's prolific week crowding
+  out everything else), `max_ai_coding_tools_per_run` (same idea, applied to
+  the ai_coding_tools category specifically, since that category floods the
+  candidate pool by nature — see select_llm.py's SYSTEM_PROMPT for the
+  matching judgment-side bar)
 
 ## Note on GitHub's 60-day scheduled-workflow rule
 
@@ -137,7 +168,12 @@ silently-failing push would reintroduce the risk.
   an off-schedule run. Not built — the review flagged this as real added
   complexity for a handful of days a year, worth adding only if it actually
   comes up.
-- **Phase 3 personalization**: `picks.jsonl` already distinguishes pick vs.
-  reject vs. untouched, which is the data a future ranking pass would need.
-  No ranking model here yet.
+- **A trained ranking model over picks.jsonl**: `feedback.py` closes the
+  loop with a few-shot prompt block (recent picks/rejects handed to
+  select_llm.py's judgment call), which is enough since the consumer is
+  itself an LLM doing judgment, not a numeric scorer. A proper ranking
+  model (e.g. weighting score.py's mechanical score by historical per-
+  source/per-tag accept rate) is still just data sitting in `picks.jsonl`
+  waiting for someone to build it, if the few-shot approach turns out not
+  to be enough signal once there's real history.
 # programming-digest

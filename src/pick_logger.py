@@ -6,7 +6,9 @@ collect_picks.yml) is simpler than standing up a webhook receiver.
 
 Logs both "pick" and "not for the channel" (reject) as distinguishable
 outcomes, so a non-tap (still pending) isn't conflated with an active reject -
-that distinction is what feeds the Phase 3 personalization pass.
+that distinction, plus the source/taxonomy_guess/select_reason context
+carried along with it, is what feedback.py turns into calibration examples
+for select_llm.py's next run.
 """
 from __future__ import annotations
 
@@ -75,6 +77,13 @@ def poll_and_log(token: str) -> int:
             "title": item_meta.get("title_fa") or item_meta.get("title"),
             "url": item_meta.get("url"),
             "tags": item_meta.get("tags"),
+            # source/taxonomy_guess/select_reason: carried through from
+            # propose.py's pending_items.json so feedback.py has enough
+            # context (not just a title) to turn this into a useful
+            # calibration example for select_llm.py's next run.
+            "source": item_meta.get("source"),
+            "taxonomy_guess": item_meta.get("taxonomy_guess"),
+            "select_reason": item_meta.get("select_reason"),
             "logged_at": datetime.now(tz=timezone.utc).isoformat(),
         })
         logged += 1

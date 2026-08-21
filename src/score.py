@@ -49,6 +49,29 @@ def _keyword_bonus(title: str, summary: str) -> float:
     return min(hits, 3) * KEYWORD_BONUS  # cap so one item can't dominate purely on keyword spam
 
 
+def _guess_primary_taxonomy(title: str, summary: str) -> str | None:
+    """Cheap keyword-count guess at the single best-fit taxonomy category.
+
+    Zero extra LLM calls/tokens - reuses the same TAXONOMY_KEYWORDS table as
+    _keyword_bonus above, just keeps *which* category won instead of only a
+    count. This is deliberately NOT sent to the LLM select/write stages and
+    is NOT what ends up in the delivered hashtags (select_llm.py's judgment
+    and write_llm.py's own "tags" output are the real, higher-quality signal
+    for those). It exists purely so propose.py can apply a cheap mechanical
+    cap - e.g. "no more than N ai_coding_tools items per run" - before
+    spending any LLM calls on the write stage. Ties keep the first category
+    in TAXONOMY_KEYWORDS' (insertion) order, which is an acceptable amount of
+    arbitrariness for a rough guess used only as a volume cap, not a verdict.
+    """
+    text = f"{title} {summary}".lower()
+    best_key, best_hits = None, 0
+    for key, keywords in TAXONOMY_KEYWORDS.items():
+        hits = sum(1 for kw in keywords if kw in text)
+        if hits > best_hits:
+            best_key, best_hits = key, hits
+    return best_key
+
+
 def score_item(item: dict[str, Any], scoring_cfg: dict) -> float:
     tier_weight = scoring_cfg["tier_weight"].get(item["tier"], 1.0)
     engagement = item.get("engagement")
@@ -66,6 +89,7 @@ def filter_seen(items: list[dict], seen_links: set[str]) -> list[dict]:
 def score_and_cut(items: list[dict], scoring_cfg: dict) -> list[dict]:
     for it in items:
         it["mech_score"] = score_item(it, scoring_cfg)
+        it["taxonomy_guess"] = _guess_primary_taxonomy(it["title"], it.get("summary", ""))
 
     ranked = sorted(items, key=lambda x: x["mech_score"], reverse=True)
     threshold = scoring_cfg["score_threshold"]

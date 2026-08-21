@@ -173,12 +173,36 @@ anti-AI-writing guidance without translation:
   sparingly and specifically (see telegram_formatting.md and how the
   channel has used them before) - not one per line as a decoration habit.
 
+## 10. Scattering separate English terms through one sentence (RTL readability)
+
+Not about word choice like #2 above, and not about whether a given term
+belongs in Latin script at all (that's register.md's job) — this is about
+*how many* separate English chunks land in one Persian sentence. Persian is
+RTL and English is LTR, so every English chunk mid-sentence is a direction
+reversal for the reader's eye; several of them in one sentence, each
+surrounded by only a word or two of Persian, is what actually makes a
+sentence unreadable, independent of whether any single word choice was
+correct. `write_llm.py` counts Latin-script chunks per sentence mechanically
+and flags anything over 2 — restructuring around the flag (which terms to
+keep, how to split the sentence) is the judgment call this pass exists to
+make. Full rule and more examples: register.md's "English-term density and
+placement" section.
+
+**Before** (4 separate English chunks — a real reader-flagged example):
+> Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره
+
+**After** (down to 2, placed together instead of alternating with Persian):
+> حالا تو Vercel Functions می‌شه از Bun.serve() به‌عنوان نقطه‌ی شروع کد استفاده کرد
+
 ## What NOT to flag (false positives)
 
 Don't over-correct. The following are not reliable signals on their own:
 
-- **Established technical vocabulary in Latin script** (API, SDK, runtime,
-  build, deploy) - that's register.md's glossary rule, not an AI tell.
+- **Established technical vocabulary in Latin script, in reasonable
+  quantity** (API, SDK, runtime, build, deploy) - that's register.md's
+  glossary rule, not an AI tell. Only flag when the COUNT per sentence goes
+  over the threshold in #10 above - one or two Latin terms in a sentence is
+  normal Persian tech writing, not a tell.
 - **A single formal-sounding word in isolation** - "کلیدی" or "مهم" used
   once is just a word. It's the cluster (several patterns from this list
   together) that signals AI writing, not one instance of one pattern.
