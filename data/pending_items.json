@@ -246,6 +246,18 @@
     "title_fa": "خروج V8 Sandbox از فاز آزمایشی و ورود به برنامه باگ‌بونتی کروم",
     "url": "https://v8.dev/blog/sandbox"
   },
+  "ed6b434ddabf20bb": {
+    "select_reason": "High-stakes security challenge testing microVM agent isolation limits.",
+    "source": "vercel_blog",
+    "tags": [
+      "security",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "$1 million hacker challenge for Vercel Sandbox",
+    "title_fa": "چالش ۱ میلیون دلاری برای نفوذ به Vercel Sandbox",
+    "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
+  },
   "fa338529a0424327": {
     "tags": [
       "ai_coding_tools",
