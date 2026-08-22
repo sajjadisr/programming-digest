@@ -1,4 +1,77 @@
 {
+  "0f7ff2340c4ff030": {
+    "tags": [
+      "languages_runtimes"
+    ],
+    "title": "Python 3.13.4, 3.12.11, 3.11.13, 3.10.18 and 3.9.23 are now available",
+    "title_fa": "نسخه‌های جدید Python 3.13.4، 3.12.11، 3.11.13، 3.10.18 و 3.9.23 منتشر شدند",
+    "url": "https://blog.python.org/2025/06/python-3134-31211-31113-31018-and-3923/"
+  },
+  "1113be99a66eb462": {
+    "tags": [
+      "security",
+      "ai_coding_tools",
+      "open_source_releases",
+      "dev_tooling_build_systems"
+    ],
+    "title": "Everything hackable will get hacked",
+    "title_fa": "بررسی امنیت کدها با هوش مصنوعی؛ هشدار ورسل درباره نسل جدید مدل‌ها",
+    "url": "https://vercel.com/blog/everything-hackable-will-get-hacked"
+  },
+  "16a148424ca89d2f": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "languages_runtimes"
+    ],
+    "title": "Bun runtime for Vercel Functions now accepts Bun.serve as an entrypoint",
+    "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
+    "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
+  },
+  "490df380f7073537": {
+    "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
+    "source": "releases:redis/redis",
+    "tags": [
+      "databases",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "8.10.1",
+    "title_fa": "به‌روزرسانی امنیتی Redis",
+    "url": "https://github.com/redis/redis/releases/tag/8.10.1"
+  },
+  "4920be8cc626b3cd": {
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.9.5",
+    "title_fa": "انتشار نسخه 2.9.5 Deno با پشتیبانی آزمایشی از QuickJS",
+    "url": "https://github.com/denoland/deno/releases/tag/v2.9.5"
+  },
+  "4ba778657c38aa67": {
+    "select_reason": "Substantive technical insight from Cloudflare on shifting bot/agent traffic mitigation from point-in-time risk evaluation to continuous trust tracking.",
+    "source": "cloudflare_blog",
+    "tags": [
+      "infra_cloud",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Unveiling good and bad behaviors on the Agentic Internet",
+    "title_fa": "استراتژی جدید کلادفلر برای تشخیص بات‌ها در عصر ایجنت‌های هوشمند",
+    "url": "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/"
+  },
+  "52e399a396eacfb9": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "ai_coding_tools",
+      "frontend_frameworks"
+    ],
+    "title": "Latest MCP spec now supported in mcp-handler",
+    "title_fa": "پشتیبانی mcp-handler از آخرین نسخه مشخصات MCP",
+    "url": "https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler"
+  },
   "557818547b5e5732": {
     "tags": [
       "ai_coding_tools",
@@ -18,6 +91,28 @@
     "title": "Building a software factory for AI SDK",
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "6ae64bcd99a19b4f": {
+    "select_reason": "Useful practical tooling article from official Kubernetes blog regarding manifest formatting and readability standards.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "How to Pretty-Print Your Kubernetes YAML as KYAML and Why You'd Want To",
+    "title_fa": "معرفی KYAML: فرمت صریح‌تر برای کانفیگ‌های کوبرنتیس",
+    "url": "https://kubernetes.io/blog/2026/08/11/how-to-pretty-print-kubernetes-yaml-as-kyaml/"
+  },
+  "6d9f931d3f4a007e": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.1.232",
+    "title_fa": "انتشار به‌روزرسانی جدید Claude Code",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
   },
   "7343769f73c7872e": {
     "tags": [
@@ -39,6 +134,129 @@
     "title": "How we migrated the database behind every Vercel build",
     "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
     "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
+  },
+  "8367f03f9ea82010": {
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases",
+      "dev_tooling_build_systems"
+    ],
+    "title": "2026-08-05, Version 26.7.0 (Current), @aduh95",
+    "title_fa": "انتشار تغییرات جدید Node.js با پشتیبانی از Perfetto و بهبود ابزارهای تست",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.7.0"
+  },
+  "852623ba39363dc8": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "infra_cloud"
+    ],
+    "title": "Set up coding agents in one command with AI Gateway",
+    "title_fa": "تنظیم یکپارچه agentهای برنامه‌نویسی با Vercel AI Gateway",
+    "url": "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway"
+  },
+  "8ca8a76f53c97c47": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "Grok Build is now available in the AI SDK harness layer",
+    "title_fa": "پشتیبانی از Grok Build در لایه Harness کتابخانه AI SDK",
+    "url": "https://vercel.com/changelog/grok-build-harness-adapter"
+  },
+  "9d92acc75b4f85e2": {
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
+    "title_fa": "بازنویسی فریم‌ورک Hydrogen با همکاری Shopify و Vercel",
+    "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts"
+  },
+  "a917fe9d4717cb0c": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "security"
+    ],
+    "title": "Turborepo and Vercel Remote Cache now support OpenID Connect (OIDC)",
+    "title_fa": "پشتیبانی از OIDC در Turborepo و Vercel Remote Cache",
+    "url": "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc"
+  },
+  "b56da077d21ad4f4": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v2.1.233",
+    "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+  },
+  "c111c3d3a6c180fb": {
+    "select_reason": "Bun v1.4 is a major major release for a key JavaScript runtime.",
+    "source": "releases:oven-sh/bun",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Bun v1.4",
+    "title_fa": "انتشار Bun 1.4.0",
+    "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.0"
+  },
+  "c11339a5907d2057": {
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "title": "v16.3.1",
+    "title_fa": "انتشار Next.js v16.3.1 با رفع باگ‌های Turbopack و مدیریت کَش",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1"
+  },
+  "d66881daaf67c3a3": {
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "title": "v2.1.225",
+    "title_fa": "انتشار نسخه 2.1.225 کلاود کد (Claude Code)",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.225"
+  },
+  "ddedb9025e1c631d": {
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "title": "Vercel Sandbox now runs on Vercel Managed Images",
+    "title_fa": "معرفی Vercel Managed Images برای محیط‌های Vercel Sandbox",
+    "url": "https://vercel.com/changelog/vercel-sandbox-managed-images"
+  },
+  "e6f670ec6fc21692": {
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems",
+      "security"
+    ],
+    "title": "The V8 Sandbox",
+    "title_fa": "خروج V8 Sandbox از فاز آزمایشی و ورود به برنامه باگ‌بونتی کروم",
+    "url": "https://v8.dev/blog/sandbox"
+  },
+  "ed6b434ddabf20bb": {
+    "select_reason": "High-stakes security challenge testing microVM agent isolation limits.",
+    "source": "vercel_blog",
+    "tags": [
+      "security",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "$1 million hacker challenge for Vercel Sandbox",
+    "title_fa": "چالش ۱ میلیون دلاری برای نفوذ به Vercel Sandbox",
+    "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
   },
   "fa338529a0424327": {
     "tags": [
