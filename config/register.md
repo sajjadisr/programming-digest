@@ -147,3 +147,13 @@ engineer skims past a clause they already know in under a second, but a
 junior reader who hits an unexplained name either stalls or silently stops
 understanding the rest of the item. A short gloss costs the expert reader
 almost nothing and saves the beginner reader the whole item.
+
+`src/write_llm.py`'s `_flag_unglossed_names` mechanically flags any
+Latin-script name not on its `_ASSUMED_KNOWN_NAMES` list (Python,
+JavaScript, GitHub, React, and similar baseline names — extend that list,
+not this prose, as the channel's assumed floor rises) so the style
+self-check pass actually re-examines this rule every time an unfamiliar
+name shows up, rather than trusting the first draft got it right. Before
+this existed, a missing gloss produced none of the *other* style flags, so
+an otherwise-clean item could skip this rule entirely and ship anyway —
+which is exactly what happened with the 2026-08-21 Bun 1.4.0 item.

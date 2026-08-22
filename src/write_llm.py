@@ -9,8 +9,9 @@ pass (see below):
   2. mechanical pass - cheap, deterministic character fixes: Arabic ي/ك ->
                       Persian ی/ک, curly quotes -> straight quotes. Also
                       flags (does not fix) formal/literary markers, Persian
-                      AI-cliché phrases, and em/en dashes for the LLM pass to
-                      handle, since rewriting around any of those requires
+                      AI-cliché phrases, em/en dashes, dense Latin-script
+                      runs, and unglossed unfamiliar names for the LLM pass
+                      to handle, since rewriting around any of those requires
                       judgment about what to say instead
   3. style pass    - LLM self-check against BOTH the register checklist and
                       the anti-AI-writing guide, addresses whatever the
@@ -117,6 +118,30 @@ _AI_CLICHE_PHRASES = [
     "باید منتظر ماند و دید", "نویدبخش", "سنگ بنای", "نقطه عطف",
 ]
 
+# Names treated as already familiar to register.md's stated audience (the
+# "would a second-year CS student or self-taught junior dev recognize this
+# on sight" test - explicitly anchored there to Python/JavaScript/GitHub/
+# React as the baseline). Anything Latin-script NOT on this list is a
+# candidate for the gloss rule below. Lowercased, no punctuation, for
+# matching against the normalized key computed in _flag_unglossed_names.
+# Extend this the same way register.md's own tier-2 glossary grows.
+_ASSUMED_KNOWN_NAMES = {
+    "python", "javascript", "typescript", "java", "c++", "c#", "go", "rust",
+    "html", "css", "sql", "php", "ruby",
+    "github", "gitlab", "git", "npm", "node.js", "nodejs", "react", "vue",
+    "angular", "next.js", "nextjs", "docker", "kubernetes", "k8s", "linux",
+    "windows", "macos", "vs code", "vscode", "aws", "google", "microsoft",
+    "vercel", "chrome", "firefox", "safari", "redis", "mongodb", "mysql",
+    "postgresql", "postgres", "api", "sdk", "cli", "http", "https", "json",
+    "url", "ai", "llm", "gpt", "chatgpt", "openai", "claude", "claude code",
+}
+
+# A Latin-script run needs at least this many consecutive letters somewhere
+# in it to be treated as a candidate "name" at all - filters out bare
+# version numbers ("v2.1.224"), single-letter flags, and similar tokens
+# that _LATIN_RUN also matches but that aren't names needing a gloss.
+_NAME_LIKE = re.compile(r"[A-Za-z]{3,}")
+
 
 def _fix_arabic_chars(text: str) -> str:
     for arabic, persian in _ARABIC_TO_PERSIAN_CHARS.items():
@@ -171,16 +196,53 @@ def _flag_dense_latin_runs(text: str) -> list[str]:
     return flags
 
 
+def _flag_unglossed_names(text: str) -> list[str]:
+    """Flags Latin-script names not on _ASSUMED_KNOWN_NAMES - the mechanical
+    backstop register.md's "explain unfamiliar names" section didn't have
+    before. That section has always been in the draft prompt, but nothing
+    ever re-checked it: unlike density/dashes/clichés, a missing gloss
+    produces none of the *other* style flags, so an item that's otherwise
+    "clean" went straight to delivery even when it skipped this rule
+    entirely - e.g. the 2026-08-21 Bun 1.4.0 item shipped with zero context
+    on what Bun even is, days after the density fix, because nothing else
+    in it ever tripped _flag_style_issues and so _style_self_check never
+    ran at all.
+
+    This does NOT try to judge whether a name is already glossed somewhere
+    in the text - that's exactly the kind of judgment call the style pass
+    exists for, same as the other flag-only checks above. It only
+    guarantees the pass actually runs and looks, instead of silently
+    trusting the first draft got it right."""
+    flags = []
+    seen = set()
+    for run in _LATIN_RUN.findall(text):
+        candidate = run.strip()
+        key = candidate.rstrip("()").lower()
+        if not key or key in seen or key in _ASSUMED_KNOWN_NAMES:
+            continue
+        if not _NAME_LIKE.search(candidate):
+            continue  # version numbers, bare flags, etc. - not a "name"
+        seen.add(key)
+        flags.append(
+            f"possibly-unfamiliar name '{candidate}' - per register.md's "
+            f"audience section, confirm it already has a short (2-6 word) "
+            f"plain-language gloss the first time it appears; add one if not"
+        )
+    return flags
+
+
 def _flag_style_issues(text: str) -> list[str]:
     """Judgment-required issues found by exact-phrase/pattern match - just
-    surfaced for the style self-check pass to fix in context. Covers four
+    surfaced for the style self-check pass to fix in context. Covers five
     distinct failure modes: literary/formal register, AI-cliché vocabulary,
-    leftover English-style dashes, and RTL-unreadable English-term density."""
+    leftover English-style dashes, RTL-unreadable English-term density, and
+    unglossed unfamiliar names."""
     flags = [m for m in _FORMAL_MARKERS if m in text]
     flags += [p for p in _AI_CLICHE_PHRASES if p in text]
     if _DASH_PATTERN.search(text):
         flags.append("em/en dash (—/–) - restructure the sentence around it")
     flags += _flag_dense_latin_runs(text)
+    flags += _flag_unglossed_names(text)
     return flags
 
 
