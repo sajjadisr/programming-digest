@@ -125,6 +125,17 @@
     "title_fa": "جزئیات دیوار آتش Vercel Sandbox برای مدیریت ترافیک ایجنت‌های AI",
     "url": "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox"
   },
+  "748b90f42d330cb9": {
+    "select_reason": "Major landmark architectural milestone in the Rust compiler moving to nightly.",
+    "source": "rust_blog",
+    "tags": [
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Enabling the next-generation trait solver on nightly",
+    "title_fa": "فعال‌شدن حل‌کننده تریت نسل بعدی Rust در نسخه نایتلی",
+    "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+  },
   "8291cda65cb5a9b0": {
     "tags": [
       "databases",
