@@ -28,6 +28,18 @@
     "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
     "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
   },
+  "34a948d52363cba3": {
+    "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "security"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.3.3",
+    "title_fa": "انتشار آپدیت امنیتی مهم برای Next.js",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
+  },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
     "source": "releases:redis/redis",
