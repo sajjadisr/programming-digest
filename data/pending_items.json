@@ -269,6 +269,18 @@
     "title_fa": "خروج V8 Sandbox از فاز آزمایشی و ورود به برنامه باگ‌بونتی کروم",
     "url": "https://v8.dev/blog/sandbox"
   },
+  "ec0d23ad72dbbbdd": {
+    "select_reason": "Major release of Kubernetes (v1.37) relevant to cloud-native developers.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Garhwal",
+    "title_fa": "انتشار نسخه ۱.۳۷ کوبرنتیز با ۶۷ قابلیت جدید",
+    "url": "https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/"
+  },
   "ed6b434ddabf20bb": {
     "select_reason": "High-stakes security challenge testing microVM agent isolation limits.",
     "source": "vercel_blog",
