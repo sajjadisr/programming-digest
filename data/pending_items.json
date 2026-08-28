@@ -84,6 +84,18 @@
     "title_fa": "پشتیبانی mcp-handler از آخرین نسخه مشخصات MCP",
     "url": "https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler"
   },
+  "548fd4bfd4c0c2bd": {
+    "select_reason": "Kubernetes Metrics API graduating to stable (v1) is a major baseline infrastructure milestone relevant to general backend/infra devs.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Metrics API graduates to stable",
+    "title_fa": "پایدار شدن API مانیتورینگ منابع در کوبرنتیز ۱.۳۷",
+    "url": "https://kubernetes.io/blog/2026/08/27/kubernetes-v1-37-metrics-api-ga/"
+  },
   "557818547b5e5732": {
     "tags": [
       "ai_coding_tools",
@@ -197,6 +209,18 @@
     "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
     "title_fa": "بازنویسی فریم‌ورک Hydrogen با همکاری Shopify و Vercel",
     "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts"
+  },
+  "a55d6f0c003b1eb5": {
+    "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-08-26, Version 26.8.0 (Current), @aduh95",
+    "title_fa": "انتشار Node.js 26.8.0 با قابلیت‌های جدید در ماژول‌های داخلی",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.8.0"
   },
   "a917fe9d4717cb0c": {
     "tags": [
