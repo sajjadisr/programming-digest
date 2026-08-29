@@ -138,6 +138,18 @@
     "title_fa": "انتشار به‌روزرسانی جدید Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
   },
+  "714dec12c50a061f": {
+    "select_reason": "Major version release of Rust (1.98.0).",
+    "source": "releases:rust-lang/rust",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Rust 1.98.0",
+    "title_fa": "انتشار Rust 1.98.0",
+    "url": "https://github.com/rust-lang/rust/releases/tag/1.98.0"
+  },
   "7343769f73c7872e": {
     "tags": [
       "ai_coding_tools",
