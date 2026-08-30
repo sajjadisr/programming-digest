@@ -1,4 +1,16 @@
 {
+  "022e3b878893feb1": {
+    "select_reason": "Notable organizational announcement for the Rust language ecosystem regarding dedicated maintainer funding.",
+    "source": "rust_blog",
+    "tags": [
+      "open_source_releases",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Announcing our first Maintainers in Residence",
+    "title_fa": "تامین مالی توسعه‌دهندگان Rust با طرح Maintainers in Residence",
+    "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
+  },
   "0f7ff2340c4ff030": {
     "tags": [
       "languages_runtimes"
@@ -27,6 +39,18 @@
     "title": "Bun runtime for Vercel Functions now accepts Bun.serve as an entrypoint",
     "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
     "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
+  },
+  "29c56b0eccaaddb0": {
+    "select_reason": "Official Kubernetes post detailing broad security infrastructure improvements for Pod Certificates and Trust Bundles.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kubernetes v1.37: Pod Certificates and Cluster Trust Bundles",
+    "title_fa": "قابلیت مدیریت گواهی‌های امنیتی در کوبرنتیز ۱.۳۷ عمومی شد",
+    "url": "https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/"
   },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
@@ -221,6 +245,18 @@
     "title": "Shopify and Vercel are rebuilding Hydrogen for faster storefronts",
     "title_fa": "بازنویسی فریم‌ورک Hydrogen با همکاری Shopify و Vercel",
     "url": "https://vercel.com/blog/shopify-and-vercel-are-rebuilding-hydrogen-for-faster-storefronts"
+  },
+  "a006d1c358967c0e": {
+    "select_reason": "Substantive architectural analysis comparing programming languages to dedicated engines for workflow orchestration.",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "The best workflow engine is a programming language",
+    "title_fa": "معرفی فریم‌ورک Workflow SDK برای اجرای مقاوم برنامه‌ها (Durable Execution)",
+    "url": "https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language"
   },
   "a55d6f0c003b1eb5": {
     "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
