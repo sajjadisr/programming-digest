@@ -162,6 +162,18 @@
     "title_fa": "انتشار به‌روزرسانی جدید Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.232"
   },
+  "700930fef5758419": {
+    "select_reason": "Major LTS release update for Node.js runtime.",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-08-26, Version 24.20.0 'Krypton' (LTS), @aduh95",
+    "title_fa": "انتشار Node.js 24.20.0 با قابلیت Package Maps و کنترل دسترسی جدید",
+    "url": "https://github.com/nodejs/node/releases/tag/v24.20.0"
+  },
   "714dec12c50a061f": {
     "select_reason": "Major version release of Rust (1.98.0).",
     "source": "releases:rust-lang/rust",
