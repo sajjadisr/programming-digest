@@ -130,6 +130,18 @@
     "title_fa": "Claude Code انتشار",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.224"
   },
+  "56d533531e70b4ee": {
+    "select_reason": "Significant general interest for backend/cloud-native engineers as Kubernetes Storage Version Migration reaches GA.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Storage Version Migration Enabled by Default",
+    "title_fa": "قابلیت Storage Version Migration در کوبرنتیز ۱.۳۷ به وضعیت GA رسید",
+    "url": "https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/"
+  },
   "5988764d8f0ffbbf": {
     "tags": [
       "ai_coding_tools",
