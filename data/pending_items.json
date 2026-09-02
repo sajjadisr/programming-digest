@@ -11,6 +11,18 @@
     "title_fa": "تامین مالی توسعه‌دهندگان Rust با طرح Maintainers in Residence",
     "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
   },
+  "0ec1e2d4630e6aaf": {
+    "select_reason": "Vercel's Fluid Compute architecture shift is broadly relevant to cloud infrastructure and serverless execution models.",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "Compute that takes any shape",
+    "title_fa": "معرفی زیرساخت پردازشی Fluid در Vercel",
+    "url": "https://vercel.com/blog/fluid-compute-takes-any-shape"
+  },
   "0f7ff2340c4ff030": {
     "tags": [
       "languages_runtimes"
