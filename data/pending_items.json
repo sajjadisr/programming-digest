@@ -348,6 +348,18 @@
     "title_fa": "انتشار Next.js v16.3.1 با رفع باگ‌های Turbopack و مدیریت کَش",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1"
   },
+  "cae3cde0353c7696": {
+    "select_reason": "Official Kubernetes post detailing Dynamic Resource Allocation updates in v1.37.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kubernetes v1.37: DRA Updates",
+    "title_fa": "پیشرفت‌ها و به‌روزرسانی‌های قابلیت DRA در کوبرنتیز ۱.۳۷",
+    "url": "https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/"
+  },
   "d66881daaf67c3a3": {
     "tags": [
       "ai_coding_tools",
