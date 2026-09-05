@@ -154,6 +154,18 @@
     "title_fa": "قابلیت Storage Version Migration در کوبرنتیز ۱.۳۷ به وضعیت GA رسید",
     "url": "https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/"
   },
+  "58cd2f8e771e42a3": {
+    "select_reason": "Graduation of KubeletInUserNamespace (rootless mode) to beta is a major security and infrastructure milestone for Kubernetes developers.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: KubeletInUserNamespace (aka Rootless mode) Graduates to Beta",
+    "title_fa": "قابلیت اجرای بدون دسترسی روت در کوبرنتیز به مرحله آزمایشی رسید",
+    "url": "https://kubernetes.io/blog/2026/09/04/kubernetes-v1-37-rootless-beta/"
+  },
   "5988764d8f0ffbbf": {
     "tags": [
       "ai_coding_tools",
