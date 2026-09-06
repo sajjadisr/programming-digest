@@ -98,6 +98,18 @@
     "title_fa": "انتشار نسخه 2.9.5 Deno با پشتیبانی آزمایشی از QuickJS",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.5"
   },
+  "4a02737544ef778d": {
+    "select_reason": "Python routing rules affect many Vercel users",
+    "source": "vercel_blog",
+    "tags": [
+      "languages_runtimes",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Python projects now support routing rules",
+    "title_fa": "پشتیبانی پروژه‌های پایتون در Vercel از قوانین مسیریابی CDN",
+    "url": "https://vercel.com/changelog/python-projects-now-support-routing-rules"
+  },
   "4ba778657c38aa67": {
     "select_reason": "Substantive technical insight from Cloudflare on shifting bot/agent traffic mitigation from point-in-time risk evaluation to continuous trust tracking.",
     "source": "cloudflare_blog",
@@ -175,6 +187,18 @@
     "title": "Building a software factory for AI SDK",
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "66c1b042946b4d88": {
+    "select_reason": "in-depth article on agent-driven page building",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How our agents build on-brand pages with design.md",
+    "title_fa": "ورسل فایل design.md را برای ساخت صفحات یکدست توسط ایجنت‌ها منتشر کرد",
+    "url": "https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md"
   },
   "6ae64bcd99a19b4f": {
     "select_reason": "Useful practical tooling article from official Kubernetes blog regarding manifest formatting and readability standards.",
@@ -434,5 +458,17 @@
     "title": "Introducing Agent Plugins 1.0.0",
     "title_fa": "معرفی Agent Plugins 1.0.0",
     "url": "https://vercel.com/changelog/introducing-agent-plugins-1-0-0"
+  },
+  "fc1d63f452ce732d": {
+    "select_reason": "Deno 2.9.6 adds new content type support, notable for web devs",
+    "source": "releases:denoland/deno",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "v2.9.6",
+    "title_fa": "انتشار Deno 2.9.6",
+    "url": "https://github.com/denoland/deno/releases/tag/v2.9.6"
   }
 }
