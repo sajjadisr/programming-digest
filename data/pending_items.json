@@ -52,6 +52,18 @@
     "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
     "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
   },
+  "1bf01c3c33d621ca": {
+    "select_reason": "Technical deep dive into new core Node Lifecycle Conditions in Kubernetes v1.37.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kubernetes v1.37: Introducing Node Lifecycle Conditions",
+    "title_fa": "اضافه‌شدن ۵ وضعیت جدید برای مدیریت نودها در کوبرنتیز v1.37",
+    "url": "https://kubernetes.io/blog/2026/09/09/kubernetes-v1-37-node-lifecycle-conditions/"
+  },
   "29c56b0eccaaddb0": {
     "select_reason": "Official Kubernetes post detailing broad security infrastructure improvements for Pod Certificates and Trust Bundles.",
     "source": "kubernetes_blog",
@@ -310,6 +322,18 @@
     "title_fa": "تنظیم یکپارچه agentهای برنامه‌نویسی با Vercel AI Gateway",
     "url": "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway"
   },
+  "8a7cf4293a318830": {
+    "select_reason": "Major framework release for React 19.3.0 with new APIs and features.",
+    "source": "releases:facebook/react",
+    "tags": [
+      "frontend_frameworks",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "19.3.0 (September 9, 2026)",
+    "title_fa": "انتشار React با قابلیت‌های جدید برای انیمیشن و رندر",
+    "url": "https://github.com/react/react/releases/tag/v19.3.0"
+  },
   "8ca8a76f53c97c47": {
     "tags": [
       "ai_coding_tools",
@@ -426,6 +450,18 @@
     "title": "Vercel Sandbox now runs on Vercel Managed Images",
     "title_fa": "معرفی Vercel Managed Images برای محیط‌های Vercel Sandbox",
     "url": "https://vercel.com/changelog/vercel-sandbox-managed-images"
+  },
+  "dec1072acd008ff8": {
+    "select_reason": "Substantive technical overview of workload-aware scheduling improvements in Kubernetes v1.37.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kubernetes v1.37: Advancing Workload-Aware Scheduling",
+    "title_fa": "قابلیت‌های جدید زمان‌بندی هوشمند بار کاری در کوبرنتیز v1.37",
+    "url": "https://kubernetes.io/blog/2026/09/08/kubernetes-v1-37-advancing-workload-aware-scheduling/"
   },
   "e6f670ec6fc21692": {
     "tags": [
