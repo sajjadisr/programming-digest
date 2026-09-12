@@ -344,6 +344,18 @@
     "title_fa": "پشتیبانی از Grok Build در لایه Harness کتابخانه AI SDK",
     "url": "https://vercel.com/changelog/grok-build-harness-adapter"
   },
+  "96fc811601db05f9": {
+    "select_reason": "Broadly relevant infrastructure milestone as Kubernetes graduates Native Histograms for metrics to Beta.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Native Histograms Graduates to Beta",
+    "title_fa": "پشتیبانی از Native Histograms در کوبرنتیس v1.37 بتا شد",
+    "url": "https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/"
+  },
   "9d92acc75b4f85e2": {
     "tags": [
       "frontend_frameworks",
