@@ -410,6 +410,18 @@
     "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
   },
+  "ba7190af76453d75": {
+    "select_reason": "Clear, significant technical update for Kubernetes infrastructure and pod resource management.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Scheduler Preemption for In-Place Pod Resize (Alpha)",
+    "title_fa": "قابلیت Preemption برای تغییر سایز زنده پادها در کوبرنتیز ۱.۳۷",
+    "url": "https://kubernetes.io/blog/2026/09/10/kubernetes-v1-37-scheduler-preemption-for-in-place-pod-resize-alpha/"
+  },
   "c111c3d3a6c180fb": {
     "select_reason": "Bun v1.4 is a major major release for a key JavaScript runtime.",
     "source": "releases:oven-sh/bun",
