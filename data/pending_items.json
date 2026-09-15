@@ -88,6 +88,18 @@
     "title_fa": "انتشار آپدیت امنیتی مهم برای Next.js",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
   },
+  "3de19e2c537ba9f2": {
+    "select_reason": "Kubernetes Memory QoS graduation, broadly relevant to devops",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Memory QoS Graduates to Beta",
+    "title_fa": "قابلیت Memory QoS در کوبرنتیز ۱.۳۷ به مرحلهٔ بتا رسید",
+    "url": "https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/"
+  },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
     "source": "releases:redis/redis",
@@ -279,6 +291,29 @@
     "title": "Enabling the next-generation trait solver on nightly",
     "title_fa": "فعال‌شدن حل‌کننده تریت نسل بعدی Rust در نسخه نایتلی",
     "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+  },
+  "7b7fbc4255de1215": {
+    "select_reason": "FastAPI frontends on CDN useful for web developers",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "FastAPI frontends and static files served from the CDN",
+    "title_fa": "سرو خودکار فایل‌های استاتیک فریم‌ورک FastAPI روی شبکه تحویل محتوای Vercel",
+    "url": "https://vercel.com/changelog/fastapi-frontends-and-static-files-served-from-the-cdn"
+  },
+  "7ba7ffd70c507f23": {
+    "select_reason": "significant CDN latency improvement of 91%",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How we cut CDN metadata lookup latency by 91%",
+    "title_fa": "کاهش ۹۱ درصدی تأخیر خواندن متادیتا در شبکه تحویل محتوا (CDN) ورسل",
+    "url": "https://vercel.com/blog/how-we-cut-cdn-metadata-lookup-latency-by-91-percent"
   },
   "7ea5a5330e0a5a55": {
     "select_reason": "Official Node.js release (v24.21.0 LTS) carries broad relevance for the general developer ecosystem.",
