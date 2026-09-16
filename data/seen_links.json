@@ -36,6 +36,7 @@
   "https://kubernetes.io/blog/2026/09/10/kubernetes-v1-37-scheduler-preemption-for-in-place-pod-resize-alpha/",
   "https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/",
   "https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/",
+  "https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/",
   "https://v8.dev/blog/sandbox",
   "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
   "https://vercel.com/blog/building-a-software-factory-for-ai-sdk",

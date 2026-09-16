@@ -224,6 +224,17 @@
     "title_fa": "ورسل فایل design.md را برای ساخت صفحات یکدست توسط ایجنت‌ها منتشر کرد",
     "url": "https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md"
   },
+  "6916be41936b06cd": {
+    "select_reason": "Substantive technical update on Kubernetes core resource management features entering Beta.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Pod-Level Resource Managers graduated to Beta",
+    "title_fa": "مدیریت منابع در سطح پاد در کوبرنتیز ۱.۳۷ بتا شد",
+    "url": "https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/"
+  },
   "6ae64bcd99a19b4f": {
     "select_reason": "Useful practical tooling article from official Kubernetes blog regarding manifest formatting and readability standards.",
     "source": "kubernetes_blog",
