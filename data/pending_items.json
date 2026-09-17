@@ -446,6 +446,18 @@
     "title_fa": "پشتیبانی از OIDC در Turborepo و Vercel Remote Cache",
     "url": "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc"
   },
+  "b402f515f974f7c9": {
+    "select_reason": "Substantive technical overview of new container storage security capabilities in Kubernetes v1.37.",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kubernetes v1.37: Hardening Container Storage with Bind Mount Options and EmptyDir Permissions",
+    "title_fa": "افزایش امنیت استوریج‌ها در کوبرنتیس نسخه ۱.۳۷",
+    "url": "https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/"
+  },
   "b56da077d21ad4f4": {
     "tags": [
       "ai_coding_tools",
