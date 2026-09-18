@@ -76,6 +76,17 @@
     "title_fa": "قابلیت مدیریت گواهی‌های امنیتی در کوبرنتیز ۱.۳۷ عمومی شد",
     "url": "https://kubernetes.io/blog/2026/08/28/kubernetes-v1-37-pod-certificates-and-cluster-trust-bundles/"
   },
+  "2ae184d8adc4e74f": {
+    "select_reason": "Deno 2.9.7 includes notable audit and security changes",
+    "source": "releases:denoland/deno",
+    "tags": [
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "v2.9.7",
+    "title_fa": "Deno v2.9.7 منتشر شد",
+    "url": "https://github.com/denoland/deno/releases/tag/v2.9.7"
+  },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
     "source": "releases:vercel/next.js",
@@ -99,6 +110,18 @@
     "title": "Kubernetes v1.37: Memory QoS Graduates to Beta",
     "title_fa": "قابلیت Memory QoS در کوبرنتیز ۱.۳۷ به مرحلهٔ بتا رسید",
     "url": "https://kubernetes.io/blog/2026/09/14/kubernetes-v1-37-memory-qos-graduates-to-beta/"
+  },
+  "4075bf65a7f931fd": {
+    "select_reason": "Security fix releases affect all Redis users",
+    "source": "releases:redis/redis",
+    "tags": [
+      "security",
+      "databases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "8.10.2",
+    "title_fa": "Redis 8.10.2 (به‌روزرسانی امنیتی)",
+    "url": "https://github.com/redis/redis/releases/tag/8.10.2"
   },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
