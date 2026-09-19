@@ -123,6 +123,18 @@
     "title_fa": "Redis 8.10.2 (به‌روزرسانی امنیتی)",
     "url": "https://github.com/redis/redis/releases/tag/8.10.2"
   },
+  "4111c9167920eca6": {
+    "select_reason": "Node.js core release with semver-minor and notable changes.",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-09-16, Version 26.9.0 (Current), @aduh95",
+    "title_fa": "انتشار Node.js 26.9.0 با ماژول جدید بنچمارک و فعال‌سازی پیش‌فرض FFI",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.9.0"
+  },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
     "source": "releases:redis/redis",
@@ -611,6 +623,18 @@
     "title": "Introducing Agent Plugins 1.0.0",
     "title_fa": "معرفی Agent Plugins 1.0.0",
     "url": "https://vercel.com/changelog/introducing-agent-plugins-1-0-0"
+  },
+  "fb0f2cf5de5e6e11": {
+    "select_reason": "Detailed write-up on reproducing and fixing a real vulnerability in a widely used library.",
+    "source": "vercel_blog",
+    "tags": [
+      "security",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "security",
+    "title": "Reproducing, disclosing, and fixing the libheif vulnerability with Hacktron and the maintainers",
+    "title_fa": "رفع یک آسیب‌پذیری امنیتی مهم در Next.js و libheif",
+    "url": "https://vercel.com/blog/reproducing-disclosing-and-fixing-the-libheif-vulnerability-with-hacktron-and-the-maintainers"
   },
   "fc1d63f452ce732d": {
     "select_reason": "Deno 2.9.6 adds new content type support, notable for web devs",
