@@ -590,6 +590,17 @@
     "title_fa": "خروج V8 Sandbox از فاز آزمایشی و ورود به برنامه باگ‌بونتی کروم",
     "url": "https://v8.dev/blog/sandbox"
   },
+  "eb063b6ffd1f4177": {
+    "select_reason": "Adds native subscription auth to AI SDK, useful for many developers",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "AI SDK harness layer now supports native subscription authentication",
+    "title_fa": "SDK هوش مصنوعی الآن احراز هویت بومی سابسکریپشن رو پشتیبانی می‌کنه",
+    "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication"
+  },
   "ec0d23ad72dbbbdd": {
     "select_reason": "Major release of Kubernetes (v1.37) relevant to cloud-native developers.",
     "source": "kubernetes_blog",
@@ -613,6 +624,18 @@
     "title": "$1 million hacker challenge for Vercel Sandbox",
     "title_fa": "چالش ۱ میلیون دلاری برای نفوذ به Vercel Sandbox",
     "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
+  },
+  "f80221514453c0c5": {
+    "select_reason": "Insightful case study of high‑frequency deployments on Vercel",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "How Delphi ships 100 times a day with its Python backend on Vercel",
+    "title_fa": "انتقال بک‌اند پایتون Delphi به Vercel و دیپلوی ۱۰۰ بار در روز",
+    "url": "https://vercel.com/blog/how-delphi-ships-100-times-a-day-with-its-python-backend-on-vercel"
   },
   "fa338529a0424327": {
     "tags": [
