@@ -42,6 +42,18 @@
     "title_fa": "بررسی امنیت کدها با هوش مصنوعی؛ هشدار ورسل درباره نسل جدید مدل‌ها",
     "url": "https://vercel.com/blog/everything-hackable-will-get-hacked"
   },
+  "145d093a7473e465": {
+    "select_reason": "Enables building/deploying OpenAI agents on Vercel, substantive",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "Build with OpenAI Agents API on Vercel",
+    "title_fa": "پشتیبانی از OpenAI Agents API در فرآیند دیپلوی Vercel",
+    "url": "https://vercel.com/changelog/build-with-openai-agents-api-on-vercel"
+  },
   "16a148424ca89d2f": {
     "tags": [
       "dev_tooling_build_systems",
@@ -86,6 +98,18 @@
     "title": "v2.9.7",
     "title_fa": "Deno v2.9.7 منتشر شد",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.7"
+  },
+  "2b1df71c5864f4b3": {
+    "select_reason": "New marketplace integration adds developer utility",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "Mem0 joins the Vercel Marketplace",
+    "title_fa": "Mem0 به مارکت‌پلیس Vercel اضافه شد",
+    "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace"
   },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
