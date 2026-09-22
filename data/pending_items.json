@@ -76,6 +76,17 @@
     "title_fa": "اضافه‌شدن ۵ وضعیت جدید برای مدیریت نودها در کوبرنتیز v1.37",
     "url": "https://kubernetes.io/blog/2026/09/09/kubernetes-v1-37-node-lifecycle-conditions/"
   },
+  "206c285589f14136": {
+    "select_reason": "Kubernetes PVC usage feature has broad relevance",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Kubernetes v1.37: Tracking When a PersistentVolumeClaim Was Last Used (Beta)",
+    "title_fa": "کوبرنتیز ۱.۳۷: شناسایی آسان‌تر دیسک‌های بدون استفاده",
+    "url": "https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/"
+  },
   "29c56b0eccaaddb0": {
     "select_reason": "Official Kubernetes post detailing broad security infrastructure improvements for Pod Certificates and Trust Bundles.",
     "source": "kubernetes_blog",
