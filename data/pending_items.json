@@ -516,6 +516,18 @@
     "title_fa": "پشتیبانی از OIDC در Turborepo و Vercel Remote Cache",
     "url": "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc"
   },
+  "ad7c514d2355adee": {
+    "select_reason": "Kubernetes SIG Apps spotlight has broad relevance",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Spotlight on SIG Apps",
+    "title_fa": "برنامه‌های جدید SIG Apps برای مدیریت بهینه‌تر هوش مصنوعی در کوبرنتیز",
+    "url": "https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/"
+  },
   "b402f515f974f7c9": {
     "select_reason": "Substantive technical overview of new container storage security capabilities in Kubernetes v1.37.",
     "source": "kubernetes_blog",
@@ -593,6 +605,18 @@
     "title_fa": "انتشار نسخه 2.1.225 کلاود کد (Claude Code)",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.225"
   },
+  "dcb1e0eadb1f512f": {
+    "select_reason": "Rust maintainer announcement is community‑relevant",
+    "source": "rust_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Announcing a Maintainer in Residence: Scott Schafer for the Cargo team",
+    "title_fa": "معرفی Scott Schafer به‌عنوان نگهداری‌دار مقیم برای تیم Cargo",
+    "url": "https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/"
+  },
   "ddedb9025e1c631d": {
     "tags": [
       "dev_tooling_build_systems",
@@ -614,6 +638,29 @@
     "title": "Kubernetes v1.37: Advancing Workload-Aware Scheduling",
     "title_fa": "قابلیت‌های جدید زمان‌بندی هوشمند بار کاری در کوبرنتیز v1.37",
     "url": "https://kubernetes.io/blog/2026/09/08/kubernetes-v1-37-advancing-workload-aware-scheduling/"
+  },
+  "df93dab15cc9351e": {
+    "select_reason": "Next.js security fix is significant for many developers",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "security"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.3.6",
+    "title_fa": "انتشار وصله‌ی امنیتی برای Next.js",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.3.6"
+  },
+  "dfcb5159a2c75ef6": {
+    "select_reason": "One‑click integrations add useful developer functionality",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "v0 adds one-click integrations for email, auth, search, and databases",
+    "title_fa": "قابلیت اتصال یک‌کلیکه به سرویس‌های جانبی به v0 اضافه شد",
+    "url": "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases"
   },
   "e6f670ec6fc21692": {
     "tags": [

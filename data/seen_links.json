@@ -3,6 +3,7 @@
   "https://blog.python.org/2025/06/python-3134-31211-31113-31018-and-3923/",
   "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/",
   "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/",
+  "https://blog.rust-lang.org/2026/09/22/announcing-a-maintainer-in-residence-scott-schafer-for-the-cargo-team/",
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.224",
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.225",
   "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
@@ -31,6 +32,7 @@
   "https://github.com/vercel/next.js/releases/tag/v15.5.24",
   "https://github.com/vercel/next.js/releases/tag/v16.3.1",
   "https://github.com/vercel/next.js/releases/tag/v16.3.3",
+  "https://github.com/vercel/next.js/releases/tag/v16.3.6",
   "https://kubernetes.io/blog/2026/08/11/how-to-pretty-print-kubernetes-yaml-as-kyaml/",
   "https://kubernetes.io/blog/2026/08/26/kubernetes-v1-37-release/",
   "https://kubernetes.io/blog/2026/08/27/kubernetes-v1-37-metrics-api-ga/",
@@ -46,6 +48,7 @@
   "https://kubernetes.io/blog/2026/09/15/kubernetes-v1-37-pod-level-resource-managers-beta/",
   "https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/",
   "https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/",
+  "https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/",
   "https://v8.dev/blog/sandbox",
   "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
   "https://vercel.com/blog/building-a-software-factory-for-ai-sdk",
@@ -72,5 +75,6 @@
   "https://vercel.com/changelog/set-up-coding-agents-in-one-command-with-ai-gateway",
   "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc",
   "https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer",
+  "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases",
   "https://vercel.com/changelog/vercel-sandbox-managed-images"
 ]
