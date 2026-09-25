@@ -506,6 +506,18 @@
     "title_fa": "انتشار Node.js 26.8.0 با قابلیت‌های جدید در ماژول‌های داخلی",
     "url": "https://github.com/nodejs/node/releases/tag/v26.8.0"
   },
+  "a8566769431792cc": {
+    "select_reason": "Important security advisory regarding environment variable secret leaks when caching Rust Miri output in CI workflows.",
+    "source": "rust_blog",
+    "tags": [
+      "امنیت",
+      "ابزارهای_ساخت"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "GitHub Actions leaking secrets when Miri output is cached",
+    "title_fa": "افشای اطلاعات حساس در GitHub Actions (سیستم CI/CD GitHub) هنگام کش کردن خروجی Miri",
+    "url": "https://blog.rust-lang.org/2026/09/21/github-actions-leaking-secrets-when-miri-output-is-cached/"
+  },
   "a917fe9d4717cb0c": {
     "tags": [
       "dev_tooling_build_systems",
