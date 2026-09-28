@@ -764,6 +764,18 @@
     "title_fa": "چالش ۱ میلیون دلاری برای نفوذ به Vercel Sandbox",
     "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
   },
+  "f17ba435e8d2a714": {
+    "select_reason": "Broad interest in Cloudflare's VoidZero JS toolchain speedups",
+    "source": "cloudflare_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Four months of VoidZero at Cloudflare: making the open-source JavaScript toolchain faster for all humans and agents",
+    "title_fa": "گزارش چهار ماهه VoidZero: ابزارهای جدید برای اکوسیستم جاوااسکریپت",
+    "url": "https://blog.cloudflare.com/voidzero-update/"
+  },
   "f80221514453c0c5": {
     "select_reason": "Insightful case study of high‑frequency deployments on Vercel",
     "source": "vercel_blog",
