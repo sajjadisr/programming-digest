@@ -169,6 +169,18 @@
     "title_fa": "Redis 8.10.2 (به‌روزرسانی امنیتی)",
     "url": "https://github.com/redis/redis/releases/tag/8.10.2"
   },
+  "4095876decdfaf16": {
+    "select_reason": "Vinext 1.0 reaching production status provides broad value to web developers interested in Vite ecosystem integration for Next.js.",
+    "source": "cloudflare_blog",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "Next.js applications, powered by Vite: introducing Vinext 1.0",
+    "title_fa": "انتشار نسخه ۱.۰ فریم‌ورک Vinext برای دیپلوی Next.js",
+    "url": "https://blog.cloudflare.com/vinext-nextjs-on-vite/"
+  },
   "4111c9167920eca6": {
     "select_reason": "Node.js core release with semver-minor and notable changes.",
     "source": "releases:nodejs/node",
