@@ -145,6 +145,30 @@
     "title_fa": "انتشار آپدیت امنیتی مهم برای Next.js",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
   },
+  "37a37d25cf983bc1": {
+    "select_reason": "Pixel Canary model added to AI Gateway",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "Pixel Canary is now available in stealth for free on AI Gateway",
+    "title_fa": "مدل جدید Pixel Canary رایگان در AI Gateway منتشر شد",
+    "url": "https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway"
+  },
+  "39d735d1ac569740": {
+    "select_reason": "Major new Rust language version",
+    "source": "releases:rust-lang/rust",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Rust 1.99.0",
+    "title_fa": "انتشار نسخه جدید زبان Rust",
+    "url": "https://github.com/rust-lang/rust/releases/tag/1.99.0"
+  },
   "3de19e2c537ba9f2": {
     "select_reason": "Kubernetes Memory QoS graduation, broadly relevant to devops",
     "source": "kubernetes_blog",
@@ -431,6 +455,17 @@
     "title_fa": "انتشار Node.js 24.21.0 با بهبود عملکرد و ارتقای وابستگی‌ها",
     "url": "https://github.com/nodejs/node/releases/tag/v24.21.0"
   },
+  "80abc6512eed5e67": {
+    "select_reason": "New GPT‑6.1 model on Vercel AI Gateway",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "GPT-6.1 Sol now available on AI Gateway",
+    "title_fa": "مدل جدید GPT-6.1 Sol به AI Gateway اضافه شد",
+    "url": "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway"
+  },
   "8291cda65cb5a9b0": {
     "tags": [
       "databases",
@@ -561,6 +596,18 @@
     "title": "Turborepo and Vercel Remote Cache now support OpenID Connect (OIDC)",
     "title_fa": "پشتیبانی از OIDC در Turborepo و Vercel Remote Cache",
     "url": "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc"
+  },
+  "aa32a645cfc0437e": {
+    "select_reason": "Spring Boot milestone releases are broadly relevant to Java developers",
+    "source": "releases:spring-projects/spring-boot",
+    "tags": [
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v4.2.0-M2",
+    "title_fa": "انتشار دومین پیش‌نمایش از Spring Boot 4.2.0",
+    "url": "https://github.com/spring-projects/spring-boot/releases/tag/v4.2.0-M2"
   },
   "ad7c514d2355adee": {
     "select_reason": "Kubernetes SIG Apps spotlight has broad relevance",
