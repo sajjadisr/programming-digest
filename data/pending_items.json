@@ -98,6 +98,18 @@
     "title_fa": "کوبرنتیز ۱.۳۷: شناسایی آسان‌تر دیسک‌های بدون استفاده",
     "url": "https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/"
   },
+  "2714864cec71b29a": {
+    "select_reason": "Rogo case study of rapid AI‑generated code deployment",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How Rogo ships agent-written code to production in 5 minutes on Vercel",
+    "title_fa": "دیپلوی ۵ دقیقه‌ای کدهای هوش مصنوعی در Rogo با Vercel",
+    "url": "https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel"
+  },
   "29c56b0eccaaddb0": {
     "select_reason": "Official Kubernetes post detailing broad security infrastructure improvements for Pod Certificates and Trust Bundles.",
     "source": "kubernetes_blog",
@@ -699,6 +711,18 @@
     "title": "Kubernetes v1.37: DRA Updates",
     "title_fa": "پیشرفت‌ها و به‌روزرسانی‌های قابلیت DRA در کوبرنتیز ۱.۳۷",
     "url": "https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/"
+  },
+  "d2681c53903b855d": {
+    "select_reason": "Jev for Python engineers showcases cross‑language AI tooling",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Jev for Python engineers",
+    "title_fa": "پشتیبانی از مدل جدید Jev در SDK پایتون Vercel",
+    "url": "https://vercel.com/blog/jev-for-python-engineers"
   },
   "d66881daaf67c3a3": {
     "tags": [
