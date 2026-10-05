@@ -31,6 +31,17 @@
     "title_fa": "نسخه‌های جدید Python 3.13.4، 3.12.11، 3.11.13، 3.10.18 و 3.9.23 منتشر شدند",
     "url": "https://blog.python.org/2025/06/python-3134-31211-31113-31018-and-3923/"
   },
+  "10ec5e0ec592c320": {
+    "select_reason": "Broadly relevant pricing change for CDN",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Introducing Flat Rate CDN",
+    "title_fa": "معرفی CDN با هزینه ثابت برای تیم‌های Pro در Vercel",
+    "url": "https://vercel.com/blog/introducing-flat-rate-cdn"
+  },
   "1113be99a66eb462": {
     "tags": [
       "security",
