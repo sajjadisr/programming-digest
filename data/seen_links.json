@@ -57,6 +57,7 @@
   "https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/",
   "https://kubernetes.io/blog/2026/09/21/kubernetes-v1-37-pvc-last-used-time/",
   "https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/",
+  "https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/",
   "https://v8.dev/blog/sandbox",
   "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox",
   "https://vercel.com/blog/building-a-software-factory-for-ai-sdk",

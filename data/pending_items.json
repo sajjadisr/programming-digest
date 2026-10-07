@@ -723,6 +723,18 @@
     "title_fa": "پیشرفت‌ها و به‌روزرسانی‌های قابلیت DRA در کوبرنتیز ۱.۳۷",
     "url": "https://kubernetes.io/blog/2026/09/03/kubernetes-v1-37-dra-updates/"
   },
+  "ce7097e55616b5f4": {
+    "select_reason": "Node swap scaling guidance is useful for ops",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Scaling Kubernetes Workloads with Node Swap",
+    "title_fa": "افزایش سه‌برابری ظرفیت نودهای کوبرنتیز با قابلیت Swap",
+    "url": "https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/"
+  },
   "d2681c53903b855d": {
     "select_reason": "Jev for Python engineers showcases cross‑language AI tooling",
     "source": "vercel_blog",
