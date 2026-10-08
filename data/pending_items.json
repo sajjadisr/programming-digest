@@ -825,6 +825,18 @@
     "title_fa": "قابلیت اتصال یک‌کلیکه به سرویس‌های جانبی به v0 اضافه شد",
     "url": "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases"
   },
+  "e5c2b39f0ca26858": {
+    "select_reason": "Django security updates affect many projects",
+    "source": "django_blog",
+    "tags": [
+      "security",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Django security releases issued: 6.1.2, 6.0.9, and 5.2.18",
+    "title_fa": "انتشار نسخه‌های امنیتی Django 6.1.2، 6.0.9 و 5.2.18",
+    "url": "https://www.djangoproject.com/weblog/2026/oct/06/security-releases/"
+  },
   "e6f670ec6fc21692": {
     "tags": [
       "languages_runtimes",
@@ -845,6 +857,18 @@
     "title": "AI SDK harness layer now supports native subscription authentication",
     "title_fa": "SDK هوش مصنوعی الآن احراز هویت بومی سابسکریپشن رو پشتیبانی می‌کنه",
     "url": "https://vercel.com/changelog/ai-sdk-harness-native-subscription-authentication"
+  },
+  "ebed89c376dc2dc6": {
+    "select_reason": "VSCode TypeScript release bundles new TS version",
+    "source": "releases:microsoft/TypeScript",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "vscode-typescript/v1.0.1",
+    "title_fa": "انتشار نسخه 1.0.1 از اکستنشن vscode-typescript که TypeScript 7.0.2 را شامل می‌شود",
+    "url": "https://github.com/microsoft/TypeScript/releases/tag/vscode-typescript%2Fv1.0.1"
   },
   "ec0d23ad72dbbbdd": {
     "select_reason": "Major release of Kubernetes (v1.37) relevant to cloud-native developers.",

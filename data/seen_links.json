@@ -14,6 +14,7 @@
   "https://github.com/denoland/deno/releases/tag/v2.9.5",
   "https://github.com/denoland/deno/releases/tag/v2.9.6",
   "https://github.com/denoland/deno/releases/tag/v2.9.7",
+  "https://github.com/microsoft/TypeScript/releases/tag/vscode-typescript%2Fv1.0.1",
   "https://github.com/nodejs/node/releases/tag/v22.23.3",
   "https://github.com/nodejs/node/releases/tag/v24.20.0",
   "https://github.com/nodejs/node/releases/tag/v24.21.0",
@@ -92,5 +93,6 @@
   "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc",
   "https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer",
   "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases",
-  "https://vercel.com/changelog/vercel-sandbox-managed-images"
+  "https://vercel.com/changelog/vercel-sandbox-managed-images",
+  "https://www.djangoproject.com/weblog/2026/oct/06/security-releases/"
 ]
