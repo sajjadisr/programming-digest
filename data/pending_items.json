@@ -421,6 +421,18 @@
     "title_fa": "انتشار Rust 1.98.0",
     "url": "https://github.com/rust-lang/rust/releases/tag/1.98.0"
   },
+  "72da395ab8a6b7b4": {
+    "select_reason": "Next.js canary and stable releases affect a broad web developer audience",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.4",
+    "title_fa": "انتشار نسخه آزمایشی جدید Next.js با بهبودهای داخلی",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.4"
+  },
   "7343769f73c7872e": {
     "tags": [
       "ai_coding_tools",
@@ -644,6 +656,18 @@
     "title_fa": "برنامه‌های جدید SIG Apps برای مدیریت بهینه‌تر هوش مصنوعی در کوبرنتیز",
     "url": "https://kubernetes.io/blog/2026/09/22/sig-apps-spotlight/"
   },
+  "b02e0d938fb73605": {
+    "select_reason": "Major Angular release of interest to many developers",
+    "source": "releases:angular/angular",
+    "tags": [
+      "frontend_frameworks",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "22.3.0-next.1",
+    "title_fa": "اطلاعاتی یافت نشد",
+    "url": "https://github.com/angular/angular/releases/tag/v22.3.0-next.1"
+  },
   "b402f515f974f7c9": {
     "select_reason": "Substantive technical overview of new container storage security capabilities in Kubernetes v1.37.",
     "source": "kubernetes_blog",
@@ -665,6 +689,17 @@
     "title": "v2.1.233",
     "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+  },
+  "b8f2aa13a0e843d4": {
+    "select_reason": "Redis test timeout improvement adds useful diagnostics",
+    "source": "releases:redis/redis",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "8.12-m02-int: Explain a test [TIMEOUT] instead of killing it silently (#15879)",
+    "title_fa": "بهبود گزارش‌گیری تست‌های Redis هنگام اتمام زمان (Timeout)",
+    "url": "https://github.com/redis/redis/releases/tag/8.12-m02-int"
   },
   "ba7190af76453d75": {
     "select_reason": "Clear, significant technical update for Kubernetes infrastructure and pod resource management.",
