@@ -11,6 +11,17 @@
     "title_fa": "تامین مالی توسعه‌دهندگان Rust با طرح Maintainers in Residence",
     "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
   },
+  "0856483f5d5a8614": {
+    "select_reason": "Vue 3.6 release candidate of interest to many front‑end developers",
+    "source": "releases:vuejs/core",
+    "tags": [
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v3.6.0-rc.11",
+    "title_fa": "انتشار نسخهٔ پیش‌نمایش Vue 3.6.0-rc.11",
+    "url": "https://github.com/vuejs/core/releases/tag/v3.6.0-rc.11"
+  },
   "0ec1e2d4630e6aaf": {
     "select_reason": "Vercel's Fluid Compute architecture shift is broadly relevant to cloud infrastructure and serverless execution models.",
     "source": "vercel_blog",
@@ -155,6 +166,18 @@
     "title": "Mem0 joins the Vercel Marketplace",
     "title_fa": "Mem0 به مارکت‌پلیس Vercel اضافه شد",
     "url": "https://vercel.com/changelog/mem0-joins-the-vercel-marketplace"
+  },
+  "2e3159aa1884ff74": {
+    "select_reason": "Bun 1.4.3 release provides new runtime features",
+    "source": "releases:oven-sh/bun",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Bun v1.4.3",
+    "title_fa": "انتشار Bun 1.4.3",
+    "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.3"
   },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
@@ -444,6 +467,18 @@
     "title_fa": "جزئیات دیوار آتش Vercel Sandbox برای مدیریت ترافیک ایجنت‌های AI",
     "url": "https://vercel.com/blog/a-sandbox-without-a-network-boundary-is-only-half-a-sandbox"
   },
+  "7384799cc19e0566": {
+    "select_reason": "Next.js canary release shows upcoming framework changes",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "v16.5.0-canary.7",
+    "title_fa": "انتشار Next.js v16.5.0‑canary.7 با بهبودهای Webpack و Turbopack",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.7"
+  },
   "748b90f42d330cb9": {
     "select_reason": "Major landmark architectural milestone in the Rust compiler moving to nightly.",
     "source": "rust_blog",
@@ -500,6 +535,18 @@
     "title": "GPT-6.1 Sol now available on AI Gateway",
     "title_fa": "مدل جدید GPT-6.1 Sol به AI Gateway اضافه شد",
     "url": "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway"
+  },
+  "817198a1bb276144": {
+    "select_reason": "Major Node.js release",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-10-07, Version 26.11.0 (Current), @aduh95",
+    "title_fa": "انتشار نسخه جدید Node.js با قابلیت‌های تازه در ماژول بافر و Alpine Linux",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.11.0"
   },
   "8291cda65cb5a9b0": {
     "tags": [
