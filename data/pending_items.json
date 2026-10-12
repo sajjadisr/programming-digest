@@ -203,6 +203,18 @@
     "title_fa": "مدل جدید Pixel Canary رایگان در AI Gateway منتشر شد",
     "url": "https://vercel.com/changelog/pixel-canary-is-now-available-in-stealth-for-free-on-ai-gateway"
   },
+  "37e34f36dfa001cc": {
+    "select_reason": "Next.js canary release relevant to broad dev audience",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.6",
+    "title_fa": "انتشار نسخه جدید canary از Next.js 16.5",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.6"
+  },
   "39d735d1ac569740": {
     "select_reason": "Major new Rust language version",
     "source": "releases:rust-lang/rust",
@@ -656,6 +668,18 @@
     "title": "2026-08-26, Version 26.8.0 (Current), @aduh95",
     "title_fa": "انتشار Node.js 26.8.0 با قابلیت‌های جدید در ماژول‌های داخلی",
     "url": "https://github.com/nodejs/node/releases/tag/v26.8.0"
+  },
+  "a5ffcf8d373c7351": {
+    "select_reason": "Kubernetes cgroup v2 shift has broad relevance",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "The Shift to cgroup v2 in Kubernetes: What You Need to Know",
+    "title_fa": "توقف پشتیبانی از cgroup v1 در کوبرنتیز",
+    "url": "https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/"
   },
   "a8566769431792cc": {
     "select_reason": "Important security advisory regarding environment variable secret leaks when caching Rust Miri output in CI workflows.",
