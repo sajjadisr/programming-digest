@@ -11,6 +11,18 @@
     "title_fa": "تامین مالی توسعه‌دهندگان Rust با طرح Maintainers in Residence",
     "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
   },
+  "0576b91efab9d548": {
+    "select_reason": "Vue 3.5.44 stable release",
+    "source": "releases:vuejs/core",
+    "tags": [
+      "frontend_frameworks",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v3.5.44",
+    "title_fa": "اطلاعاتی یافت نشد",
+    "url": "https://github.com/vuejs/core/releases/tag/v3.5.44"
+  },
   "0856483f5d5a8614": {
     "select_reason": "Vue 3.6 release candidate of interest to many front‑end developers",
     "source": "releases:vuejs/core",
@@ -501,6 +513,17 @@
     "title": "Enabling the next-generation trait solver on nightly",
     "title_fa": "فعال‌شدن حل‌کننده تریت نسل بعدی Rust در نسخه نایتلی",
     "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
+  },
+  "76a0f4028e0afd82": {
+    "select_reason": "Next.js canary release with core changes",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "v16.5.0-canary.9",
+    "title_fa": "نسخهٔ v16.5.0-canary.9 از Next.js منتشر شد",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.9"
   },
   "7b7fbc4255de1215": {
     "select_reason": "FastAPI frontends on CDN useful for web developers",
