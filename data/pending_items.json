@@ -121,6 +121,18 @@
     "title_fa": "نسخه‌ی جدید Node.js 22 منتشر شد",
     "url": "https://github.com/nodejs/node/releases/tag/v22.23.3"
   },
+  "2056cdcc51a54ec7": {
+    "select_reason": "security fixes affect all Next.js users",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "security",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.4.1",
+    "title_fa": "انتشار آپدیت امنیتی برای Next.js",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.4.1"
+  },
   "206c285589f14136": {
     "select_reason": "Kubernetes PVC usage feature has broad relevance",
     "source": "kubernetes_blog",
@@ -286,6 +298,18 @@
     "title": "2026-09-16, Version 26.9.0 (Current), @aduh95",
     "title_fa": "انتشار Node.js 26.9.0 با ماژول جدید بنچمارک و فعال‌سازی پیش‌فرض FFI",
     "url": "https://github.com/nodejs/node/releases/tag/v26.9.0"
+  },
+  "4622528705e7449b": {
+    "select_reason": "Kubernetes job troubleshooting, broadly useful",
+    "source": "kubernetes_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Why Is My Kubernetes Job Still Pending? Tracing Kueue Admission with Headlamp",
+    "title_fa": "عیب‌یابی آسان‌تر Jobها در کوبرنتیز با افزونه جدید Headlamp",
+    "url": "https://kubernetes.io/blog/2026/10/14/tracing-kueue-admission-with-headlamp/"
   },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
@@ -953,6 +977,17 @@
     "title": "v0 adds one-click integrations for email, auth, search, and databases",
     "title_fa": "قابلیت اتصال یک‌کلیکه به سرویس‌های جانبی به v0 اضافه شد",
     "url": "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases"
+  },
+  "e23c47b999e69a66": {
+    "select_reason": "Middleware improvement useful beyond Vercel users",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Skip sending request bodies to Routing Middleware",
+    "title_fa": "قابلیت غیرفعال‌کردن ارسال بدنه درخواست به میدل‌ویر Vercel",
+    "url": "https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware"
   },
   "e5c2b39f0ca26858": {
     "select_reason": "Django security updates affect many projects",
