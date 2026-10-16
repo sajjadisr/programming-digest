@@ -179,6 +179,17 @@
     "title_fa": "Deno v2.9.7 منتشر شد",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.7"
   },
+  "2aec123467bee8f1": {
+    "select_reason": "Vue 3 RC release, relevant to front‑end developers",
+    "source": "releases:vuejs/core",
+    "tags": [
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v3.6.0-rc.12",
+    "title_fa": "v3.6.0‑rc.12",
+    "url": "https://github.com/vuejs/core/releases/tag/v3.6.0-rc.12"
+  },
   "2b1df71c5864f4b3": {
     "select_reason": "New marketplace integration adds developer utility",
     "source": "vercel_blog",
@@ -798,6 +809,18 @@
     "title_fa": "افزایش امنیت استوریج‌ها در کوبرنتیس نسخه ۱.۳۷",
     "url": "https://kubernetes.io/blog/2026/09/16/kubernetes-v1-37-hardening-container-storage/"
   },
+  "b4f60b2c05d1c82e": {
+    "select_reason": "Core Next.js release, broadly relevant",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "v16.4.2",
+    "title_fa": "انتشار Next.js 16.4.2",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.4.2"
+  },
   "b56da077d21ad4f4": {
     "tags": [
       "ai_coding_tools",
@@ -1115,5 +1138,16 @@
     "title": "v2.9.6",
     "title_fa": "انتشار Deno 2.9.6",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.6"
+  },
+  "fff3b83ca6a4d492": {
+    "select_reason": "Next.js canary release, significant framework updates",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.14",
+    "title_fa": "انتشار نسخه جدید Canary برای Next.js 16.5",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.14"
   }
 }
