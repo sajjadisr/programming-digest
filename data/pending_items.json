@@ -11,6 +11,18 @@
     "title_fa": "تامین مالی توسعه‌دهندگان Rust با طرح Maintainers in Residence",
     "url": "https://blog.rust-lang.org/2026/08/26/announcing-our-first-maintainers-in-residence/"
   },
+  "026847ce92213023": {
+    "select_reason": "Security fix release for widely used Next.js version",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v15.5.28",
+    "title_fa": "انتشار Next.js v15.5.28",
+    "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28"
+  },
   "0576b91efab9d548": {
     "select_reason": "Vue 3.5.44 stable release",
     "source": "releases:vuejs/core",
@@ -213,6 +225,17 @@
     "title": "Bun v1.4.3",
     "title_fa": "انتشار Bun 1.4.3",
     "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.3"
+  },
+  "2ffa5d9e65d892f8": {
+    "select_reason": "Next.js canary updates are broadly relevant to web developers",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "v16.5.0-canary.16",
+    "title_fa": "انتشار نسخه Canary جدید Next.js با بهبودهای زیرساختی",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.16"
   },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
@@ -715,6 +738,18 @@
     "title_fa": "معرفی فریم‌ورک Workflow SDK برای اجرای مقاوم برنامه‌ها (Durable Execution)",
     "url": "https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language"
   },
+  "a19bc1245e878166": {
+    "select_reason": "Hackathon findings have cross‑community interest",
+    "source": "vercel_blog",
+    "tags": [
+      "security",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "security",
+    "title": "Findings from the $1M Vercel Sandbox challenge",
+    "title_fa": "نتایج چالش ۱ میلیون دلاری نفوذ به Vercel Sandbox",
+    "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
+  },
   "a55d6f0c003b1eb5": {
     "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
     "source": "releases:nodejs/node",
@@ -910,6 +945,18 @@
     "title": "Scaling Kubernetes Workloads with Node Swap",
     "title_fa": "افزایش سه‌برابری ظرفیت نودهای کوبرنتیز با قابلیت Swap",
     "url": "https://kubernetes.io/blog/2026/10/05/scaling-kubernetes-workloads-with-node-swap/"
+  },
+  "d0ecc4214e6c76de": {
+    "select_reason": "Vercel Ship recap covers broader AI agents trend",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Vercel Ship 2026 recap",
+    "title_fa": "خلاصه رویداد Vercel Ship 2026: معرفی زیرساخت برای ایجنت‌ها و پشتیبانی عمومی از پایتون",
+    "url": "https://vercel.com/blog/vercel-ship-2026-recap"
   },
   "d2681c53903b855d": {
     "select_reason": "Jev for Python engineers showcases cross‑language AI tooling",
