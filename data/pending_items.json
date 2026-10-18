@@ -435,6 +435,18 @@
     "title_fa": "قابلیت Storage Version Migration در کوبرنتیز ۱.۳۷ به وضعیت GA رسید",
     "url": "https://kubernetes.io/blog/2026/08/31/kubernetes-v1-37-storage-version-migration-ga/"
   },
+  "57351f86b8d6c2de": {
+    "select_reason": "Major Node.js release of broad interest",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "open_source_releases",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-10-14, Version 26.12.0 (Current), @richardlau",
+    "title_fa": "انتشار نسخه جدید Node.js",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.12.0"
+  },
   "58cd2f8e771e42a3": {
     "select_reason": "Graduation of KubeletInUserNamespace (rootless mode) to beta is a major security and infrastructure milestone for Kubernetes developers.",
     "source": "kubernetes_blog",
