@@ -469,6 +469,18 @@
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
   },
+  "5f9d5716f578b19c": {
+    "select_reason": "expands backend options on Vercel, broadly useful",
+    "source": "vercel_blog",
+    "tags": [
+      "languages_runtimes",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Backends on Vercel: Python, containers, and Daemons",
+    "title_fa": "پشتیبانی Python، کانتینر و Daemonها در Vercel",
+    "url": "https://vercel.com/blog/backends-on-vercel-python-containers-and-daemons"
+  },
   "66c1b042946b4d88": {
     "select_reason": "in-depth article on agent-driven page building",
     "source": "vercel_blog",
@@ -640,6 +652,18 @@
     "title": "GPT-6.1 Sol now available on AI Gateway",
     "title_fa": "مدل جدید GPT-6.1 Sol به AI Gateway اضافه شد",
     "url": "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway"
+  },
+  "80f7d46d93c2c75c": {
+    "select_reason": "new agent commerce paradigm relevant to many devs",
+    "source": "vercel_blog",
+    "tags": [
+      "frontend_frameworks",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Vercel and Shopify make agents first-class shoppers",
+    "title_fa": "انتشار Vercel Shop: قالب جدید Next.js برای فروشگاه‌های سازگار با ایجنت‌های هوش مصنوعی",
+    "url": "https://vercel.com/blog/vercel-and-shopify-make-agents-first-class-shoppers"
   },
   "817198a1bb276144": {
     "select_reason": "Major Node.js release",
@@ -923,6 +947,18 @@
     "title_fa": "انتشار Next.js v16.3.1 با رفع باگ‌های Turbopack و مدیریت کَش",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1"
   },
+  "c202181bf05ea4b7": {
+    "select_reason": "Node.js LTS release, broadly significant",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-10-14, Version 24.22.0 'Krypton' (LTS), @richardlau prepared by @aduh95",
+    "title_fa": "انتشار نسخه جدید Node.js v24.22.0 (LTS)",
+    "url": "https://github.com/nodejs/node/releases/tag/v24.22.0"
+  },
   "c44ffca2a20287d1": {
     "select_reason": "Broad overview of agent skill ecosystem, relevant to many devs",
     "source": "vercel_blog",
@@ -990,6 +1026,18 @@
     "title": "v2.1.225",
     "title_fa": "انتشار نسخه 2.1.225 کلاود کد (Claude Code)",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.225"
+  },
+  "d79f0023338dab6c": {
+    "select_reason": "major Vite release, important for web dev tooling",
+    "source": "releases:vitejs/vite",
+    "tags": [
+      "dev_tooling_build_systems",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "create-vite@9.3.0",
+    "title_fa": "انتشار به‌روزرسانی جدید create-vite",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0"
   },
   "da1d2b046f1b6518": {
     "select_reason": "Node.js current version release is of general interest",
