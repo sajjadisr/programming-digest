@@ -226,6 +226,18 @@
     "title_fa": "انتشار Bun 1.4.3",
     "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.3"
   },
+  "2f63ea2888e1312b": {
+    "select_reason": "Go language patch release",
+    "source": "releases:golang/go",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "[release-branch.go1.27] go1.27.3",
+    "title_fa": "ارجاع به go1.27.3 در مخزن Go",
+    "url": "https://github.com/golang/go/releases/tag/go1.27.3"
+  },
   "2ffa5d9e65d892f8": {
     "select_reason": "Next.js canary updates are broadly relevant to web developers",
     "source": "releases:vercel/next.js",
@@ -629,6 +641,18 @@
     "title": "How we cut CDN metadata lookup latency by 91%",
     "title_fa": "کاهش ۹۱ درصدی تأخیر خواندن متادیتا در شبکه تحویل محتوا (CDN) ورسل",
     "url": "https://vercel.com/blog/how-we-cut-cdn-metadata-lookup-latency-by-91-percent"
+  },
+  "7e0a3da59f67342d": {
+    "select_reason": "Next.js canary release with notable dev‑tool improvement",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.19",
+    "title_fa": "انتشار Next.js v16.5.0-canary.19",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.19"
   },
   "7ea5a5330e0a5a55": {
     "select_reason": "Official Node.js release (v24.21.0 LTS) carries broad relevance for the general developer ecosystem.",
