@@ -1212,6 +1212,18 @@
     "title_fa": "چالش ۱ میلیون دلاری برای نفوذ به Vercel Sandbox",
     "url": "https://vercel.com/blog/one-million-dollar-hacker-challenge-for-vercel-sandbox"
   },
+  "efebdd7f50fe9e4e": {
+    "select_reason": "Kotlin beta release has broad relevance to many developers",
+    "source": "releases:JetBrains/kotlin",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Kotlin 2.5.0-Beta2",
+    "title_fa": "انتشار Kotlin 2.5.0-Beta2",
+    "url": "https://github.com/JetBrains/kotlin/releases/tag/v2.5.0-Beta2"
+  },
   "f17ba435e8d2a714": {
     "select_reason": "Broad interest in Cloudflare's VoidZero JS toolchain speedups",
     "source": "cloudflare_blog",
