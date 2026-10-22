@@ -1,4 +1,16 @@
 {
+  "0098e0bdcb294121": {
+    "select_reason": "adds Python support to Vercel routing middleware, broad relevance",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Routing Middleware now supports Python",
+    "title_fa": "پشتیبانی Vercel از پایتون برای میدل‌ورهای مسیریابی",
+    "url": "https://vercel.com/changelog/routing-middleware-now-supports-python"
+  },
   "022e3b878893feb1": {
     "select_reason": "Notable organizational announcement for the Rust language ecosystem regarding dedicated maintainer funding.",
     "source": "rust_blog",
@@ -22,6 +34,18 @@
     "title": "v15.5.28",
     "title_fa": "انتشار Next.js v15.5.28",
     "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28"
+  },
+  "0443dcbc4753d680": {
+    "select_reason": "Deno 2.9.8 release with notable fixes",
+    "source": "releases:denoland/deno",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "v2.9.8",
+    "title_fa": "انتشار Deno 2.9.8 با بهبودهای امنیتی و رفع باگ‌های Node.js",
+    "url": "https://github.com/denoland/deno/releases/tag/v2.9.8"
   },
   "0576b91efab9d548": {
     "select_reason": "Vue 3.5.44 stable release",
@@ -493,6 +517,18 @@
     "title_fa": "پشتیبانی Python، کانتینر و Daemonها در Vercel",
     "url": "https://vercel.com/blog/backends-on-vercel-python-containers-and-daemons"
   },
+  "62b196023aed654c": {
+    "select_reason": "Vercel monorepo deployment limit improvement",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "Skipped monorepo deployments no longer count against limits",
+    "title_fa": "دیپلوی‌های ردشده در مونوریپوهای Vercel دیگر جزو محدودیت‌های پرداختی حساب نمی‌شوند",
+    "url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits"
+  },
   "66c1b042946b4d88": {
     "select_reason": "in-depth article on agent-driven page building",
     "source": "vercel_blog",
@@ -743,6 +779,17 @@
     "title_fa": "انتشار React با قابلیت‌های جدید برای انیمیشن و رندر",
     "url": "https://github.com/react/react/releases/tag/v19.3.0"
   },
+  "8bae4eddcfce0c99": {
+    "select_reason": "Bun 1.4.4 release, relevant runtime news",
+    "source": "releases:oven-sh/bun",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Bun v1.4.4",
+    "title_fa": "انتشار Bun v1.4.4",
+    "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.4"
+  },
   "8c5444467586461d": {
     "select_reason": "Case study on massive internal app shipping, broadly useful insights",
     "source": "vercel_blog",
@@ -925,6 +972,17 @@
     "title": "v2.1.233",
     "title_fa": "انتشار نسخه 2.1.233 ابزار Claude Code",
     "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.233"
+  },
+  "b63d8bfa28343d30": {
+    "select_reason": "Node.js security releases, important for all developers",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "security"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-10-21, Version 26.12.1 (Current), @aduh95 prepared by @RafaelGSS",
+    "title_fa": "Node.js v26.12.1، انتشار امنیتی",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.12.1"
   },
   "b8f2aa13a0e843d4": {
     "select_reason": "Redis test timeout improvement adds useful diagnostics",
@@ -1235,6 +1293,18 @@
     "title": "Four months of VoidZero at Cloudflare: making the open-source JavaScript toolchain faster for all humans and agents",
     "title_fa": "گزارش چهار ماهه VoidZero: ابزارهای جدید برای اکوسیستم جاوااسکریپت",
     "url": "https://blog.cloudflare.com/voidzero-update/"
+  },
+  "f4b372c09c603dbf": {
+    "select_reason": "Rustup 1.29.2 release, useful tool update",
+    "source": "rust_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "security"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Announcing rustup 1.29.2",
+    "title_fa": "انتشار rustup 1.29.2 برای رفع یک آسیب‌پذیری امنیتی",
+    "url": "https://blog.rust-lang.org/2026/10/20/Rustup-1.29.2/"
   },
   "f80221514453c0c5": {
     "select_reason": "Insightful case study of high‑frequency deployments on Vercel",
