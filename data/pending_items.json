@@ -517,6 +517,18 @@
     "title_fa": "پشتیبانی Python، کانتینر و Daemonها در Vercel",
     "url": "https://vercel.com/blog/backends-on-vercel-python-containers-and-daemons"
   },
+  "6285a0d4d76d1157": {
+    "select_reason": "general availability of Python on Vercel, relevant to many developers",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Python on Vercel is now generally available",
+    "title_fa": "پشتیبانی از پایتون در Vercel عمومی شد",
+    "url": "https://vercel.com/blog/python-on-vercel-is-now-generally-available"
+  },
   "62b196023aed654c": {
     "select_reason": "Vercel monorepo deployment limit improvement",
     "source": "vercel_blog",
@@ -756,6 +768,18 @@
     "title": "2026-08-05, Version 26.7.0 (Current), @aduh95",
     "title_fa": "انتشار تغییرات جدید Node.js با پشتیبانی از Perfetto و بهبود ابزارهای تست",
     "url": "https://github.com/nodejs/node/releases/tag/v26.7.0"
+  },
+  "850c38d2b93e9bdc": {
+    "select_reason": "major Spring Boot release with notable new features",
+    "source": "releases:spring-projects/spring-boot",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v4.2.0-RC1",
+    "title_fa": "نسخه‌ی جدید Spring Boot 4.2.0‑RC1",
+    "url": "https://github.com/spring-projects/spring-boot/releases/tag/v4.2.0-RC1"
   },
   "852623ba39363dc8": {
     "tags": [
@@ -1051,6 +1075,18 @@
     "title": "State of agent skills",
     "title_fa": "رشد چشمگیر اکوسیستم skills.sh؛ یک میلیون مهارت در هفت ماه",
     "url": "https://vercel.com/blog/state-of-agent-skills"
+  },
+  "c46b92f3bb80db56": {
+    "select_reason": "broad security relevance about credential practices",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "Death to long-lived static credentials",
+    "title_fa": "پایان کلیدهای ثابت و طولانی‌مدت در Vercel",
+    "url": "https://vercel.com/blog/death-to-long-lived-static-credentials"
   },
   "cae3cde0353c7696": {
     "select_reason": "Official Kubernetes post detailing Dynamic Resource Allocation updates in v1.37.",
