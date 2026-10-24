@@ -381,6 +381,18 @@
     "title_fa": "عیب‌یابی آسان‌تر Jobها در کوبرنتیز با افزونه جدید Headlamp",
     "url": "https://kubernetes.io/blog/2026/10/14/tracing-kueue-admission-with-headlamp/"
   },
+  "48aecfc55260ed7a": {
+    "select_reason": "General availability of Python serverless support on a major Web platform.",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Python on Vercel is now generally available",
+    "title_fa": "پشتیبانی رسمی از پایتون در Vercel برای برنامه‌های فول‌استک عرضه شد",
+    "url": "https://vercel.com/changelog/python-on-vercel-is-now-generally-available"
+  },
   "490df380f7073537": {
     "select_reason": "Critical Redis security patch addressing heap OOB write vulnerabilities across multiple supported release lines.",
     "source": "releases:redis/redis",
@@ -880,6 +892,18 @@
     "title": "Findings from the $1M Vercel Sandbox challenge",
     "title_fa": "نتایج چالش ۱ میلیون دلاری نفوذ به Vercel Sandbox",
     "url": "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge"
+  },
+  "a2fe4b30f6b594ed": {
+    "select_reason": "Notable platform feature enabling long-running background daemon processes on serverless architecture.",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "Vercel Daemons is now in public beta",
+    "title_fa": "قابلیت Vercel Daemons به بتا عمومی آمد",
+    "url": "https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta"
   },
   "a55d6f0c003b1eb5": {
     "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
