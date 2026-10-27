@@ -74,6 +74,13 @@
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.14",
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.16",
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.19",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.20",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.21",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.23",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.24",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.25",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.26",
+  "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.28",
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.3",
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.4",
   "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.6",
@@ -111,6 +118,7 @@
   "https://vercel.com/blog/findings-from-the-1-million-dollar-vercel-sandbox-challenge",
   "https://vercel.com/blog/fluid-compute-takes-any-shape",
   "https://vercel.com/blog/how-delphi-ships-100-times-a-day-with-its-python-backend-on-vercel",
+  "https://vercel.com/blog/how-interfaze-serves-50-million-requests-a-month-on-vercel",
   "https://vercel.com/blog/how-klaviyo-shipped-356-internal-apps-in-two-weeks-on-vercel",
   "https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md",
   "https://vercel.com/blog/how-rogo-ships-agent-written-code-to-production-in-5-minutes-on-vercel",
@@ -131,6 +139,7 @@
   "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions",
   "https://vercel.com/changelog/fastapi-frontends-and-static-files-served-from-the-cdn",
   "https://vercel.com/changelog/gpt-6-1-sol-now-available-on-ai-gateway",
+  "https://vercel.com/changelog/gpt-6-1-terra-now-available-on-ai-gateway",
   "https://vercel.com/changelog/grok-build-harness-adapter",
   "https://vercel.com/changelog/introducing-agent-plugins-1-0-0",
   "https://vercel.com/changelog/latest-mcp-spec-now-supported-in-mcp-handler",
@@ -148,5 +157,6 @@
   "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases",
   "https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta",
   "https://vercel.com/changelog/vercel-sandbox-managed-images",
-  "https://www.djangoproject.com/weblog/2026/oct/06/security-releases/"
+  "https://www.djangoproject.com/weblog/2026/oct/06/security-releases/",
+  "https://www.djangoproject.com/weblog/2026/oct/19/quarterly-contributor-outreach/"
 ]

@@ -321,6 +321,18 @@
     "title_fa": "انتشار نسخه جدید زبان Rust",
     "url": "https://github.com/rust-lang/rust/releases/tag/1.99.0"
   },
+  "3afc9a980e6082fa": {
+    "select_reason": "major Next.js canary updates affect many React developers",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.28",
+    "title_fa": "انتشار نسخه Canary فریم‌ورک Next.js v16.5.0",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.28"
+  },
   "3de19e2c537ba9f2": {
     "select_reason": "Kubernetes Memory QoS graduation, broadly relevant to devops",
     "source": "kubernetes_blog",
@@ -565,6 +577,18 @@
     "title_fa": "ورسل فایل design.md را برای ساخت صفحات یکدست توسط ایجنت‌ها منتشر کرد",
     "url": "https://vercel.com/blog/how-our-agents-build-on-brand-pages-with-design-md"
   },
+  "66c29e84d3f59e2f": {
+    "select_reason": "new GPT-6.1 model is a notable AI capability advance",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "GPT-6.1 Terra now available on AI Gateway",
+    "title_fa": "پشتیبانی Vercel از مدل GPT-6.1 Terra",
+    "url": "https://vercel.com/changelog/gpt-6-1-terra-now-available-on-ai-gateway"
+  },
   "6916be41936b06cd": {
     "select_reason": "Substantive technical update on Kubernetes core resource management features entering Beta.",
     "source": "kubernetes_blog",
@@ -770,6 +794,18 @@
     "title": "How we migrated the database behind every Vercel build",
     "title_fa": "مهاجرت دیتابیس بیلدهای ورسل از Redis به DynamoDB",
     "url": "https://vercel.com/blog/how-we-migrated-the-database-behind-every-vercel-build"
+  },
+  "82949a31637f41d4": {
+    "select_reason": "Django community outreach is relevant to many open‑source contributors",
+    "source": "django_blog",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Quarterly contributor outreach",
+    "title_fa": "فراخوان شورای هدایت جنگو برای مشارکت در نسخه 6.2",
+    "url": "https://www.djangoproject.com/weblog/2026/oct/19/quarterly-contributor-outreach/"
   },
   "8367f03f9ea82010": {
     "tags": [
@@ -986,6 +1022,18 @@
     "title": "22.3.0-next.1",
     "title_fa": "اطلاعاتی یافت نشد",
     "url": "https://github.com/angular/angular/releases/tag/v22.3.0-next.1"
+  },
+  "b32cba0c79e64065": {
+    "select_reason": "case study of scaling 50M requests offers valuable infrastructure insights",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How Interfaze serves 50 million requests a month on Vercel",
+    "title_fa": "میزبانی ماهانه ۵۰ میلیون درخواست رو Vercel توسط یک استارتاپ AI",
+    "url": "https://vercel.com/blog/how-interfaze-serves-50-million-requests-a-month-on-vercel"
   },
   "b402f515f974f7c9": {
     "select_reason": "Substantive technical overview of new container storage security capabilities in Kubernetes v1.37.",
