@@ -1,4 +1,16 @@
 {
+  "008512bdedf0ef91": {
+    "select_reason": "notable AI Gateway partnership expansion",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "ElevenLabs on AI Gateway",
+    "title_fa": "پشتیبانی Vercel AI Gateway از مدل‌های صوتی ElevenLabs",
+    "url": "https://vercel.com/blog/elevenlabs-on-ai-gateway"
+  },
   "0098e0bdcb294121": {
     "select_reason": "adds Python support to Vercel routing middleware, broad relevance",
     "source": "vercel_blog",
@@ -998,6 +1010,18 @@
     "title": "v4.2.0-M2",
     "title_fa": "انتشار دومین پیش‌نمایش از Spring Boot 4.2.0",
     "url": "https://github.com/spring-projects/spring-boot/releases/tag/v4.2.0-M2"
+  },
+  "ab88661a74761e9b": {
+    "select_reason": "Kubernetes workload conformance WG has broad ecosystem impact",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Announcing the Workload Conformance Working Group",
+    "title_fa": "تشکیل گروه کاری جدید برای استانداردسازی رفتار برنامه‌ها در کوبرنتیز",
+    "url": "https://kubernetes.io/blog/2026/10/27/announcing-workload-conformance-wg/"
   },
   "ad7c514d2355adee": {
     "select_reason": "Kubernetes SIG Apps spotlight has broad relevance",
