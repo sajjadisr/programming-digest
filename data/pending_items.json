@@ -124,6 +124,18 @@
     "title_fa": "بررسی امنیت کدها با هوش مصنوعی؛ هشدار ورسل درباره نسل جدید مدل‌ها",
     "url": "https://vercel.com/blog/everything-hackable-will-get-hacked"
   },
+  "1411959d9265bc3d": {
+    "select_reason": "Major CI announcement relevant to many developers",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Introducing Vercel CI",
+    "title_fa": "رونمایی ورسل از Vercel CI برای افزایش سرعت بررسی Pull Requestها",
+    "url": "https://vercel.com/blog/introducing-vercel-ci"
+  },
   "145d093a7473e465": {
     "select_reason": "Enables building/deploying OpenAI agents on Vercel, substantive",
     "source": "vercel_blog",
