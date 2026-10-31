@@ -148,6 +148,17 @@
     "title_fa": "پشتیبانی از OpenAI Agents API در فرآیند دیپلوی Vercel",
     "url": "https://vercel.com/changelog/build-with-openai-agents-api-on-vercel"
   },
+  "14a8146a83d0b4ce": {
+    "select_reason": "Significant performance improvement for Vercel Flags",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "Vercel Flags starts 7x faster and no longer extends function duration",
+    "title_fa": "سرعت Vercel Flags SDK تا ۷ برابر افزایش یافت",
+    "url": "https://vercel.com/changelog/vercel-flags-starts-7x-faster-and-no-longer-extends-function-duration"
+  },
   "16a148424ca89d2f": {
     "tags": [
       "dev_tooling_build_systems",
@@ -965,6 +976,17 @@
     "title_fa": "قابلیت Vercel Daemons به بتا عمومی آمد",
     "url": "https://vercel.com/changelog/vercel-daemons-is-now-in-public-beta"
   },
+  "a33d0e7954deadc6": {
+    "select_reason": "Runtime Cache overhaul is broadly useful for web developers",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "Simplifying runtime caching on Vercel",
+    "title_fa": "ساده‌سازی سیستم کش در Vercel",
+    "url": "https://vercel.com/blog/simplifying-runtime-caching-on-vercel"
+  },
   "a55d6f0c003b1eb5": {
     "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
     "source": "releases:nodejs/node",
@@ -1243,6 +1265,17 @@
     "title": "Jev for Python engineers",
     "title_fa": "پشتیبانی از مدل جدید Jev در SDK پایتون Vercel",
     "url": "https://vercel.com/blog/jev-for-python-engineers"
+  },
+  "d31d9f938380f2b5": {
+    "select_reason": "Create‑vite release brings notable updates for front‑end tooling",
+    "source": "releases:vitejs/vite",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "create-vite@9.3.2",
+    "title_fa": "انتشار نسخه 9.3.2 ابزار create-vite",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2"
   },
   "d66881daaf67c3a3": {
     "tags": [
