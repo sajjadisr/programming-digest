@@ -1057,6 +1057,18 @@
     "title_fa": "تشکیل گروه کاری جدید برای استانداردسازی رفتار برنامه‌ها در کوبرنتیز",
     "url": "https://kubernetes.io/blog/2026/10/27/announcing-workload-conformance-wg/"
   },
+  "ac50c04afbd382eb": {
+    "select_reason": "Major open-source database release candidate (Redis 8.12).",
+    "source": "releases:redis/redis",
+    "tags": [
+      "databases",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "8.12 RC1",
+    "title_fa": "انتشار نسخه RC1 از دیتابیس Redis 8.12",
+    "url": "https://github.com/redis/redis/releases/tag/8.12-rc1"
+  },
   "ad7c514d2355adee": {
     "select_reason": "Kubernetes SIG Apps spotlight has broad relevance",
     "source": "kubernetes_blog",
