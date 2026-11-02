@@ -320,6 +320,18 @@
     "title_fa": "انتشار آپدیت امنیتی مهم برای Next.js",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.3"
   },
+  "363f8354878a657e": {
+    "select_reason": "Major Next.js canary release affecting many developers",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.35",
+    "title_fa": "انتشار نسخه جدید Next.js با تغییرات در Turbopack و سیستم کش",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.35"
+  },
   "37a37d25cf983bc1": {
     "select_reason": "Pixel Canary model added to AI Gateway",
     "source": "vercel_blog",
@@ -1288,6 +1300,18 @@
     "title": "create-vite@9.3.2",
     "title_fa": "انتشار نسخه 9.3.2 ابزار create-vite",
     "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.2"
+  },
+  "d65abdeddeb47aa1": {
+    "select_reason": "Introducing Virtual Models, a notable AI Gateway feature",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "Introducing Virtual Models on AI Gateway",
+    "title_fa": "معرفی مدل‌های مجازی در Vercel AI Gateway",
+    "url": "https://vercel.com/blog/ai-gateway-virtual-models"
   },
   "d66881daaf67c3a3": {
     "tags": [
