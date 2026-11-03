@@ -47,6 +47,18 @@
     "title_fa": "انتشار Next.js v15.5.28",
     "url": "https://github.com/vercel/next.js/releases/tag/v15.5.28"
   },
+  "0425a0933ce67923": {
+    "select_reason": "Tailwind 4.3.4 adds Turbopack loader, broad impact",
+    "source": "releases:tailwindlabs/tailwindcss",
+    "tags": [
+      "dev_tooling_build_systems",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "v4.3.4",
+    "title_fa": "Tailwind CSS منتشر شد",
+    "url": "https://github.com/tailwindlabs/tailwindcss/releases/tag/v4.3.4"
+  },
   "0443dcbc4753d680": {
     "select_reason": "Deno 2.9.8 release with notable fixes",
     "source": "releases:denoland/deno",
@@ -308,6 +320,18 @@
     "title_fa": "انتشار نسخه Canary جدید Next.js با بهبودهای زیرساختی",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.16"
   },
+  "310cc898be6a4372": {
+    "select_reason": "Node.js 26 LTS GA on Vercel, broadly useful",
+    "source": "vercel_blog",
+    "tags": [
+      "languages_runtimes",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Node.js 26 LTS is now Generally Available on Vercel",
+    "title_fa": "پشتیبانی از Node.js 26 در Vercel",
+    "url": "https://vercel.com/changelog/node-js-26-lts-is-now-generally-available-on-vercel"
+  },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
     "source": "releases:vercel/next.js",
@@ -379,6 +403,18 @@
     "title": "v16.5.0-canary.28",
     "title_fa": "انتشار نسخه Canary فریم‌ورک Next.js v16.5.0",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.28"
+  },
+  "3c0fd78ab7cdd727": {
+    "select_reason": "Next.js v16.4.4 release notes",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v16.4.4",
+    "title_fa": "انتشار نسخه جدید Next.js با رفع چند باگ مهم",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.4.4"
   },
   "3de19e2c537ba9f2": {
     "select_reason": "Kubernetes Memory QoS graduation, broadly relevant to devops",
@@ -1241,6 +1277,18 @@
     "title": "Death to long-lived static credentials",
     "title_fa": "پایان کلیدهای ثابت و طولانی‌مدت در Vercel",
     "url": "https://vercel.com/blog/death-to-long-lived-static-credentials"
+  },
+  "c99e237d5d0c56f7": {
+    "select_reason": "Node.js 27 alpha introduces new V8, notable for devs",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "open_source_releases",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-10-29, Version 27.0.0-alpha.0.0.0 (Alpha), @RafaelGSS",
+    "title_fa": "انتشار نسخهٔ آلفای Node.js 27 با موتور V8 جدید و تغییرات حافظه",
+    "url": "https://github.com/nodejs/node/releases/tag/v27.0.0-alpha.0.0.0"
   },
   "cae3cde0353c7696": {
     "select_reason": "Official Kubernetes post detailing Dynamic Resource Allocation updates in v1.37.",
