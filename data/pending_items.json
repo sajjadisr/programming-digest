@@ -297,6 +297,18 @@
     "title_fa": "انتشار Bun 1.4.3",
     "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.3"
   },
+  "2e6a221cac7d2de4": {
+    "select_reason": "New scheduled tasks / cron feature introducing general developer utility for background jobs on Vercel.",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Introducing Vercel Schedules",
+    "title_fa": "معرفی Vercel Schedules: زمان‌بندی پویا برای ایجنت‌ها و برنامه‌ها",
+    "url": "https://vercel.com/blog/introducing-vercel-schedules"
+  },
   "2f63ea2888e1312b": {
     "select_reason": "Go language patch release",
     "source": "releases:golang/go",
