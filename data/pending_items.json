@@ -684,6 +684,17 @@
     "title_fa": "پشتیبانی Vercel از مدل GPT-6.1 Terra",
     "url": "https://vercel.com/changelog/gpt-6-1-terra-now-available-on-ai-gateway"
   },
+  "68e46c97cf014f43": {
+    "select_reason": "Release of a new developer-targeted typeface in the popular Geist family.",
+    "source": "vercel_blog",
+    "tags": [
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Introducing Geist Serif",
+    "title_fa": "معرفی فونت جدید Geist Serif",
+    "url": "https://vercel.com/blog/introducing-geist-serif"
+  },
   "6916be41936b06cd": {
     "select_reason": "Substantive technical update on Kubernetes core resource management features entering Beta.",
     "source": "kubernetes_blog",
@@ -1589,6 +1600,18 @@
     "title": "Four months of VoidZero at Cloudflare: making the open-source JavaScript toolchain faster for all humans and agents",
     "title_fa": "گزارش چهار ماهه VoidZero: ابزارهای جدید برای اکوسیستم جاوااسکریپت",
     "url": "https://blog.cloudflare.com/voidzero-update/"
+  },
+  "f27ad28b0c4db975": {
+    "select_reason": "Notable ecosystem funding news supporting widely-used web dev tool Vite.",
+    "source": "cloudflare_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "Launching the Vite Ecosystem Fund",
+    "title_fa": "حمایت مالی ۳۰۰ هزار دلاری کلودفلر از اکوسیستم Vite",
+    "url": "https://blog.cloudflare.com/launching-vite-ecosystem-fund/"
   },
   "f4b372c09c603dbf": {
     "select_reason": "Rustup 1.29.2 release, useful tool update",
