@@ -181,6 +181,18 @@
     "title_fa": "Bun runtime تو Vercel Functions حالا می‌تونه Bun.serve() رو به‌عنوان ورودی‌کد بپذیره",
     "url": "https://vercel.com/changelog/bun-serve-entrypoint-for-vercel-functions"
   },
+  "1758f68afa54b9c4": {
+    "select_reason": "Zapier case study shows practical Vercel integration",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How Zapier turns ideas into working software in hours with Vercel",
+    "title_fa": "استفاده‌ی تیم‌های Zapier از Vercel و v0 برای ساخت ابزارهای داخلی",
+    "url": "https://vercel.com/blog/how-zapier-turns-ideas-into-working-software-in-hours-with-vercel"
+  },
   "1bf01c3c33d621ca": {
     "select_reason": "Technical deep dive into new core Node Lifecycle Conditions in Kubernetes v1.37.",
     "source": "kubernetes_blog",
@@ -623,6 +635,18 @@
     "title": "Building a software factory for AI SDK",
     "title_fa": "ساخت «کارخانه نرم‌افزار» برای مدیریت AI SDK ورسل",
     "url": "https://vercel.com/blog/building-a-software-factory-for-ai-sdk"
+  },
+  "5a0e461323169ad1": {
+    "select_reason": "Vercel Tracing GA is broadly useful",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Vercel Tracing is now generally available",
+    "title_fa": "قابلیت Vercel Tracing عمومی شد",
+    "url": "https://vercel.com/changelog/vercel-tracing-is-now-generally-available"
   },
   "5f9d5716f578b19c": {
     "select_reason": "expands backend options on Vercel, broadly useful",
