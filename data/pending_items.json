@@ -193,6 +193,18 @@
     "title_fa": "استفاده‌ی تیم‌های Zapier از Vercel و v0 برای ساخت ابزارهای داخلی",
     "url": "https://vercel.com/blog/how-zapier-turns-ideas-into-working-software-in-hours-with-vercel"
   },
+  "1b4254c65d9be0ff": {
+    "select_reason": "Chat SDK streaming UI adds valuable dev capability",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Chat SDK agents can now stream generative UI with json-render",
+    "title_fa": "تولید رابط کاربری پویا در Chat SDK با کتابخانه‌ی json-render",
+    "url": "https://vercel.com/changelog/json-render-and-chat-sdk-agents"
+  },
   "1bf01c3c33d621ca": {
     "select_reason": "Technical deep dive into new core Node Lifecycle Conditions in Kubernetes v1.37.",
     "source": "kubernetes_blog",
@@ -204,6 +216,18 @@
     "title": "Kubernetes v1.37: Introducing Node Lifecycle Conditions",
     "title_fa": "اضافه‌شدن ۵ وضعیت جدید برای مدیریت نودها در کوبرنتیز v1.37",
     "url": "https://kubernetes.io/blog/2026/09/09/kubernetes-v1-37-node-lifecycle-conditions/"
+  },
+  "1f206af9c6a7e514": {
+    "select_reason": "Node security LTS releases affect all Node developers",
+    "source": "releases:nodejs/node",
+    "tags": [
+      "security",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "2026-11-11, Version 26.13.1 'Lithium' (LTS), @aduh95",
+    "title_fa": "انتشار به‌روزرسانی امنیتی برای Node.js",
+    "url": "https://github.com/nodejs/node/releases/tag/v26.13.1"
   },
   "1fd0b73416e5f0f0": {
     "select_reason": "Node.js LTS release is broadly relevant",
@@ -626,6 +650,17 @@
     "title_fa": "قابلیت اجرای بدون دسترسی روت در کوبرنتیز به مرحله آزمایشی رسید",
     "url": "https://kubernetes.io/blog/2026/09/04/kubernetes-v1-37-rootless-beta/"
   },
+  "59870f6acd506937": {
+    "select_reason": "Next.js canary releases contain notable core changes",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.48",
+    "title_fa": "انتشار نسخه جدید Next.js (پیش‌نسخه canary.48)",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.48"
+  },
   "5988764d8f0ffbbf": {
     "tags": [
       "ai_coding_tools",
@@ -1013,6 +1048,30 @@
     "title_fa": "پشتیبانی از Grok Build در لایه Harness کتابخانه AI SDK",
     "url": "https://vercel.com/changelog/grok-build-harness-adapter"
   },
+  "9122a5763f76dcec": {
+    "select_reason": "Workflow SDK websockets improvement useful for devs",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Workflow SDK now writes over WebSockets on Vercel",
+    "title_fa": "کاهش هزینه‌ها در Vercel Workflows با پشتیبانی از WebSocket",
+    "url": "https://vercel.com/changelog/workflow-writes-now-use-websockets-on-vercel"
+  },
+  "95d2b43c68d42ce0": {
+    "select_reason": "TypeScript VSCode release bundles new TS version",
+    "source": "releases:microsoft/TypeScript",
+    "tags": [
+      "dev_tooling_build_systems",
+      "languages_runtimes"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "vscode-typescript/v1.0.2",
+    "title_fa": "انتشار نسخه v1.0.2 افزونه vscode-typescript",
+    "url": "https://github.com/microsoft/TypeScript/releases/tag/vscode-typescript%2Fv1.0.2"
+  },
   "96fc811601db05f9": {
     "select_reason": "Broadly relevant infrastructure milestone as Kubernetes graduates Native Histograms for metrics to Beta.",
     "source": "kubernetes_blog",
@@ -1163,6 +1222,18 @@
     "title": "8.12 RC1",
     "title_fa": "انتشار نسخه RC1 از دیتابیس Redis 8.12",
     "url": "https://github.com/redis/redis/releases/tag/8.12-rc1"
+  },
+  "ace31f3b0bb1b6f0": {
+    "select_reason": "Claude-code releases introduce new AI coding model",
+    "source": "releases:anthropics/claude-code",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "v2.1.321",
+    "title_fa": "انتشار نسخه جدید Claude Code با مدل Fable 5.2",
+    "url": "https://github.com/anthropics/claude-code/releases/tag/v2.1.321"
   },
   "ad7c514d2355adee": {
     "select_reason": "Kubernetes SIG Apps spotlight has broad relevance",
