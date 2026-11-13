@@ -71,6 +71,18 @@
     "title_fa": "انتشار Deno 2.9.8 با بهبودهای امنیتی و رفع باگ‌های Node.js",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.8"
   },
+  "052ecc9fd4745c9e": {
+    "select_reason": "Case study of scaling medical search",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How OpenEvidence scales medical search for 650K doctors",
+    "title_fa": "کاهش ۹۰ درصدی هزینه‌های OpenEvidence روی Vercel با وجود رشد بسیار زیاد",
+    "url": "https://vercel.com/blog/how-openevidence-scales-medical-search-for-doctors"
+  },
   "0576b91efab9d548": {
     "select_reason": "Vue 3.5.44 stable release",
     "source": "releases:vuejs/core",
@@ -719,6 +731,18 @@
     "title_fa": "دیپلوی‌های ردشده در مونوریپوهای Vercel دیگر جزو محدودیت‌های پرداختی حساب نمی‌شوند",
     "url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits"
   },
+  "652fa99c90081f08": {
+    "select_reason": "Major Next.js canary release",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "languages_runtimes",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "v16.5.0-canary.49",
+    "title_fa": "انتشار نسخه جدید Next.js (نسخه v16.5.0-canary.49)",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.49"
+  },
   "66c1b042946b4d88": {
     "select_reason": "in-depth article on agent-driven page building",
     "source": "vercel_blog",
@@ -1140,6 +1164,18 @@
     "title": "Simplifying runtime caching on Vercel",
     "title_fa": "ساده‌سازی سیستم کش در Vercel",
     "url": "https://vercel.com/blog/simplifying-runtime-caching-on-vercel"
+  },
+  "a44af420774e4554": {
+    "select_reason": "Vercel Security Review launch",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "security"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "Vercel Security Review now in public beta",
+    "title_fa": "ابزار جدید Vercel Security Review وارد بتا شد",
+    "url": "https://vercel.com/changelog/vercel-security-review-public-beta"
   },
   "a55d6f0c003b1eb5": {
     "select_reason": "Standard Node.js current release update relevant to JS/TS developers broadly.",
