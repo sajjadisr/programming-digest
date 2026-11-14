@@ -892,6 +892,18 @@
     "title_fa": "نسخهٔ v16.5.0-canary.9 از Next.js منتشر شد",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.9"
   },
+  "7968226ff07d62d7": {
+    "select_reason": "Major version release of a durable execution SDK for async JavaScript workflows.",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Workflow SDK 5: built for production",
+    "title_fa": "انتشار Vercel Workflow SDK 5 با تمرکز بر امنیت و کارایی عامل‌های AI",
+    "url": "https://vercel.com/blog/workflow-sdk-5"
+  },
   "7b7fbc4255de1215": {
     "select_reason": "FastAPI frontends on CDN useful for web developers",
     "source": "vercel_blog",
