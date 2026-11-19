@@ -106,6 +106,17 @@
     "title_fa": "انتشار نسخهٔ پیش‌نمایش Vue 3.6.0-rc.11",
     "url": "https://github.com/vuejs/core/releases/tag/v3.6.0-rc.11"
   },
+  "0a961e0e6d20bccd": {
+    "select_reason": "New collaborative dev tool usable beyond Vercel customers",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "Introducing Vercel Board",
+    "title_fa": "معرفی Vercel Board",
+    "url": "https://vercel.com/blog/introducing-vercel-board"
+  },
   "0ec1e2d4630e6aaf": {
     "select_reason": "Vercel's Fluid Compute architecture shift is broadly relevant to cloud infrastructure and serverless execution models.",
     "source": "vercel_blog",
@@ -356,6 +367,18 @@
     "title": "Introducing Vercel Schedules",
     "title_fa": "معرفی Vercel Schedules: زمان‌بندی پویا برای ایجنت‌ها و برنامه‌ها",
     "url": "https://vercel.com/blog/introducing-vercel-schedules"
+  },
+  "2f2dcaa3d13bcabb": {
+    "select_reason": "Kubernetes core networking change affecting many clusters",
+    "source": "kubernetes_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Scheduling the removal of the kube-proxy IPVS backend",
+    "title_fa": "برنامه‌ریزی برای حذف بک‌اند IPVS از kube-proxy",
+    "url": "https://kubernetes.io/blog/2026/11/16/ipvs-removal/"
   },
   "2f63ea2888e1312b": {
     "select_reason": "Go language patch release",
