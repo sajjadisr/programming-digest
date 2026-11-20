@@ -1165,6 +1165,18 @@
     "title_fa": "معرفی فریم‌ورک Workflow SDK برای اجرای مقاوم برنامه‌ها (Durable Execution)",
     "url": "https://vercel.com/blog/the-best-workflow-engine-is-a-programming-language"
   },
+  "a0792ea92321f143": {
+    "select_reason": "Crucial security advisory and mitigation details for a critical OpenJDK vulnerability.",
+    "source": "cloudflare_blog",
+    "tags": [
+      "security",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "infra_cloud",
+    "title": "How Cloudflare WAF helps protect against Java4Shell (CVE-2026-114938)",
+    "title_fa": "جزئیات آسیب‌پذیری بحرانی Java4Shell و راهکارهای Cloudflare و JVM برای مقابله با آن",
+    "url": "https://blog.cloudflare.com/java4shell-waf-protection/"
+  },
   "a19bc1245e878166": {
     "select_reason": "Hackathon findings have cross‑community interest",
     "source": "vercel_blog",
