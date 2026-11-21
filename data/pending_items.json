@@ -415,6 +415,18 @@
     "title_fa": "پشتیبانی از Node.js 26 در Vercel",
     "url": "https://vercel.com/changelog/node-js-26-lts-is-now-generally-available-on-vercel"
   },
+  "341333f6cd123692": {
+    "select_reason": "General availability of an open-source framework for agent development is a notable ecosystem milestone.",
+    "source": "vercel_blog",
+    "tags": [
+      "open_source_releases",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Introducing eve 1.0",
+    "title_fa": "انتشار نسخه ۱.۰ فریم‌ورک متن‌باز eve",
+    "url": "https://vercel.com/blog/eve-is-now-generally-available"
+  },
   "34a948d52363cba3": {
     "select_reason": "Critical security vulnerability fixes affecting Next.js core framework across active versions.",
     "source": "releases:vercel/next.js",
