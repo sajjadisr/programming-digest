@@ -23,6 +23,18 @@
     "title_fa": "پشتیبانی Vercel از پایتون برای میدل‌ورهای مسیریابی",
     "url": "https://vercel.com/changelog/routing-middleware-now-supports-python"
   },
+  "00f4e0e7fffc20d3": {
+    "select_reason": "instant static deployments support more assets",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Single-second static deployments now support more assets",
+    "title_fa": "پشتیبانی Vercel از دارایی‌های بیشتر در دیپلوی آنی سایت‌های استاتیک",
+    "url": "https://vercel.com/changelog/single-second-static-deployments-now-support-more-assets"
+  },
   "022e3b878893feb1": {
     "select_reason": "Notable organizational announcement for the Rust language ecosystem regarding dedicated maintainer funding.",
     "source": "rust_blog",
@@ -239,6 +251,17 @@
     "title": "Kubernetes v1.37: Introducing Node Lifecycle Conditions",
     "title_fa": "اضافه‌شدن ۵ وضعیت جدید برای مدیریت نودها در کوبرنتیز v1.37",
     "url": "https://kubernetes.io/blog/2026/09/09/kubernetes-v1-37-node-lifecycle-conditions/"
+  },
+  "1c5558b6bd90aa5d": {
+    "select_reason": "Redis 8.12 GA major release",
+    "source": "releases:redis/redis",
+    "tags": [
+      "databases"
+    ],
+    "taxonomy_guess": "databases",
+    "title": "8.12.0",
+    "title_fa": "Redis 8.12",
+    "url": "https://github.com/redis/redis/releases/tag/8.12.0"
   },
   "1f206af9c6a7e514": {
     "select_reason": "Node security LTS releases affect all Node developers",
@@ -570,6 +593,17 @@
     "title": "Why Is My Kubernetes Job Still Pending? Tracing Kueue Admission with Headlamp",
     "title_fa": "عیب‌یابی آسان‌تر Jobها در کوبرنتیز با افزونه جدید Headlamp",
     "url": "https://kubernetes.io/blog/2026/10/14/tracing-kueue-admission-with-headlamp/"
+  },
+  "47f3c5c447658546": {
+    "select_reason": "new AI models added to Vercel AI Gateway",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Liquid AI's d1.2 and d1.2-ultra are now available on AI Gateway",
+    "title_fa": "مدل‌های جدید Liquid AI در دسترس قرار گرفتند",
+    "url": "https://vercel.com/changelog/liquid-ais-d1-2-and-d1-2-ultra-are-now-available-on-ai-gateway"
   },
   "48aecfc55260ed7a": {
     "select_reason": "General availability of Python serverless support on a major Web platform.",
