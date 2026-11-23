@@ -1490,6 +1490,18 @@
     "title_fa": "انتشار Next.js v16.3.1 با رفع باگ‌های Turbopack و مدیریت کَش",
     "url": "https://github.com/vercel/next.js/releases/tag/v16.3.1"
   },
+  "c19318beb8d8a33a": {
+    "select_reason": "Thoughtful engineering piece discussing API/CLI design paradigms and testing strategies for autonomous agents.",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "Agents are users, so your software needs evals",
+    "title_fa": "چرا تست و ارزیابی خودکار ایجنت‌های هوش مصنوعی لازم است؟",
+    "url": "https://vercel.com/blog/agent-evals"
+  },
   "c202181bf05ea4b7": {
     "select_reason": "Node.js LTS release, broadly significant",
     "source": "releases:nodejs/node",
@@ -1848,6 +1860,18 @@
     "title": "Announcing rustup 1.29.2",
     "title_fa": "انتشار rustup 1.29.2 برای رفع یک آسیب‌پذیری امنیتی",
     "url": "https://blog.rust-lang.org/2026/10/20/Rustup-1.29.2/"
+  },
+  "f63a5a4a79405734": {
+    "select_reason": "Spring Boot 4.2.0 is a major framework release for the Java/Spring ecosystem.",
+    "source": "releases:spring-projects/spring-boot",
+    "tags": [
+      "languages_runtimes",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "v4.2.0",
+    "title_fa": "انتشار نسخه 4.2.0",
+    "url": "https://github.com/spring-projects/spring-boot/releases/tag/v4.2.0"
   },
   "f80221514453c0c5": {
     "select_reason": "Insightful case study of high‑frequency deployments on Vercel",
