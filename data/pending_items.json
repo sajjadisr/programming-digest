@@ -663,6 +663,18 @@
     "title_fa": "استراتژی جدید کلادفلر برای تشخیص بات‌ها در عصر ایجنت‌های هوشمند",
     "url": "https://blog.cloudflare.com/good-and-bad-agentic-behaviors/"
   },
+  "4fc061829a73eb88": {
+    "select_reason": "Next.js canary updates are broadly relevant to React/Next developers",
+    "source": "releases:vercel/next.js",
+    "tags": [
+      "frontend_frameworks",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "v16.5.0-canary.62",
+    "title_fa": "نسخهٔ Canary v16.5.0 برای Next.js منتشر شد",
+    "url": "https://github.com/vercel/next.js/releases/tag/v16.5.0-canary.62"
+  },
   "52e399a396eacfb9": {
     "tags": [
       "dev_tooling_build_systems",
