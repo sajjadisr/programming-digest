@@ -962,6 +962,18 @@
     "title_fa": "فعال‌شدن حل‌کننده تریت نسل بعدی Rust در نسخه نایتلی",
     "url": "https://blog.rust-lang.org/2026/08/21/enabling-next-solver-on-nightly/"
   },
+  "74d8eb690164add0": {
+    "select_reason": "Shows broader low-code trend beyond vendor",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "ai_coding_tools"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "How Cozey turns its operators into software builders on Vercel",
+    "title_fa": "تجربه‌ی یک شرکت کانادایی در توسعه‌ی نرم‌افزار روی Vercel",
+    "url": "https://vercel.com/blog/how-cozey-turns-its-operators-into-software-builders-on-vercel"
+  },
   "76a0f4028e0afd82": {
     "select_reason": "Next.js canary release with core changes",
     "source": "releases:vercel/next.js",
@@ -1200,6 +1212,18 @@
     "title": "Kubernetes v1.37: Native Histograms Graduates to Beta",
     "title_fa": "پشتیبانی از Native Histograms در کوبرنتیس v1.37 بتا شد",
     "url": "https://kubernetes.io/blog/2026/09/11/kubernetes-v1-37-native-histograms-beta/"
+  },
+  "99ce4045d64de1c9": {
+    "select_reason": "Private inference support has broader AI security relevance",
+    "source": "vercel_blog",
+    "tags": [
+      "ai_coding_tools",
+      "infra_cloud"
+    ],
+    "taxonomy_guess": "ai_coding_tools",
+    "title": "AI Gateway now supports Private Inference",
+    "title_fa": "پشتیبانی Vercel AI Gateway از مدل‌های خصوصی و شخصی‌سازی‌شده",
+    "url": "https://vercel.com/changelog/ai-gateway-now-supports-private-inference"
   },
   "9d92acc75b4f85e2": {
     "tags": [
