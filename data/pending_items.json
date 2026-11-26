@@ -1156,6 +1156,18 @@
     "title_fa": "انتشار Bun v1.4.4",
     "url": "https://github.com/oven-sh/bun/releases/tag/bun-v1.4.4"
   },
+  "8bef2d897c81f9b1": {
+    "select_reason": "Increased request body limit for Vercel Functions",
+    "source": "vercel_blog",
+    "tags": [
+      "infra_cloud",
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "Vercel Functions now support request bodies up to 20MiB",
+    "title_fa": "افزایش حجم درخواست‌ها در Vercel Functions به ۲۰ مگابایت",
+    "url": "https://vercel.com/changelog/vercel-functions-now-support-request-bodies-up-to-20mib"
+  },
   "8c5444467586461d": {
     "select_reason": "Case study on massive internal app shipping, broadly useful insights",
     "source": "vercel_blog",
@@ -1329,6 +1341,18 @@
     "title": "The Shift to cgroup v2 in Kubernetes: What You Need to Know",
     "title_fa": "توقف پشتیبانی از cgroup v1 در کوبرنتیز",
     "url": "https://kubernetes.io/blog/2026/10/06/kubernetes-cgroups-v2-shift/"
+  },
+  "a81a83fd0580607b": {
+    "select_reason": "Create-vite update adds devtools option",
+    "source": "releases:vitejs/vite",
+    "tags": [
+      "dev_tooling_build_systems",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "languages_runtimes",
+    "title": "create-vite@9.4.0",
+    "title_fa": "آپدیت create-vite با پشتیبانی از Vite+ و ابزار DevTools",
+    "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.4.0"
   },
   "a8566769431792cc": {
     "select_reason": "Important security advisory regarding environment variable secret leaks when caching Rust Miri output in CI workflows.",
@@ -1954,6 +1978,17 @@
     "title": "v2.9.6",
     "title_fa": "انتشار Deno 2.9.6",
     "url": "https://github.com/denoland/deno/releases/tag/v2.9.6"
+  },
+  "fdcbd69684c8f751": {
+    "select_reason": "Vercel workflow performance improvement",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling_build_systems"
+    ],
+    "taxonomy_guess": "open_source_releases",
+    "title": "Workflow is 10x faster, again",
+    "title_fa": "معرفی موتور اجرای جدید در Workflow SDK 5.8",
+    "url": "https://vercel.com/changelog/workflows-speculative-execution"
   },
   "fff3b83ca6a4d492": {
     "select_reason": "Next.js canary release, significant framework updates",
