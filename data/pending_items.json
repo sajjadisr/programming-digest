@@ -1505,6 +1505,18 @@
     "title_fa": "Node.js v26.12.1، انتشار امنیتی",
     "url": "https://github.com/nodejs/node/releases/tag/v26.12.1"
   },
+  "b8e6d58ec1d240e7": {
+    "select_reason": "significant Vite release with new error handling",
+    "source": "releases:vitejs/vite",
+    "tags": [
+      "dev_tooling_build_systems",
+      "frontend_frameworks"
+    ],
+    "taxonomy_guess": "dev_tooling_build_systems",
+    "title": "v8.4.0",
+    "title_fa": "انتشار نسخه جدید Vite با بهبود مدیریت خطا و فرایند ساخت",
+    "url": "https://github.com/vitejs/vite/releases/tag/v8.4.0"
+  },
   "b8f2aa13a0e843d4": {
     "select_reason": "Redis test timeout improvement adds useful diagnostics",
     "source": "releases:redis/redis",
@@ -1700,6 +1712,18 @@
     "title": "create-vite@9.3.0",
     "title_fa": "انتشار به‌روزرسانی جدید create-vite",
     "url": "https://github.com/vitejs/vite/releases/tag/create-vite%409.3.0"
+  },
+  "d871d0170a39edd7": {
+    "select_reason": "Angular 22.3.1 adds notable animation features",
+    "source": "releases:angular/angular",
+    "tags": [
+      "frontend_frameworks",
+      "open_source_releases"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "22.3.1",
+    "title_fa": "انتشار نسخه جدید در گیت‌هاب",
+    "url": "https://github.com/angular/angular/releases/tag/v22.3.1"
   },
   "da1d2b046f1b6518": {
     "select_reason": "Node.js current version release is of general interest",
