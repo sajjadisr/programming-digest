@@ -225,6 +225,7 @@
   "https://vercel.com/changelog/single-second-static-deployments-now-support-more-assets",
   "https://vercel.com/changelog/skip-sending-request-bodies-to-routing-middleware",
   "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits",
+  "https://vercel.com/changelog/speed-insights-now-measures-soft-navigations",
   "https://vercel.com/changelog/turborepo-and-remote-cache-now-support-openid-connect-oidc",
   "https://vercel.com/changelog/use-acp-compatible-harnesses-with-the-ai-sdk-harness-layer",
   "https://vercel.com/changelog/v0-adds-one-click-integrations-for-email-auth-search-and-databases",

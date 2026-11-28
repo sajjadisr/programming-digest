@@ -812,6 +812,17 @@
     "title_fa": "دیپلوی‌های ردشده در مونوریپوهای Vercel دیگر جزو محدودیت‌های پرداختی حساب نمی‌شوند",
     "url": "https://vercel.com/changelog/skipped-monorepo-deployments-no-longer-count-against-limits"
   },
+  "62b6beed36edda99": {
+    "select_reason": "Speed Insights now measures soft navigations, useful for web devs",
+    "source": "vercel_blog",
+    "tags": [
+      "dev_tooling"
+    ],
+    "taxonomy_guess": "frontend_frameworks",
+    "title": "Speed Insights now measures soft navigations",
+    "title_fa": "Speed Insights حالا ناوبری‌های نرم رو هم اندازه می‌گیره",
+    "url": "https://vercel.com/changelog/speed-insights-now-measures-soft-navigations"
+  },
   "652fa99c90081f08": {
     "select_reason": "Major Next.js canary release",
     "source": "releases:vercel/next.js",
